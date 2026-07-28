@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Bright Future Coaching</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#f4f7fb;
+color:#333;
+}
+
+/* NAVBAR */
+
+header{
+position:sticky;
+top:0;
+background:#fff;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+z-index:1000;
+}
+
+.logo{
+font-size:30px;
+font-weight:700;
+color:#0d6efd;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:#222;
+font-weight:600;
+transition:.4s;
+}
+
+nav ul li a:hover{
+color:#0d6efd;
+}
+
+.btn{
+background:#ff6b00;
+color:white!important;
+padding:10px 22px;
+border-radius:30px;
+}
+
+/* HERO */
+
+.hero{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:70px 8%;
+
+gap:50px;
+
+background:linear-gradient(135deg,#0d6efd,#42a5f5);
+
+color:white;
+
+flex-wrap:wrap;
+
+}
+
+.hero-text{
+flex:1;
+}
+
+.hero-text h1{
+font-size:55px;
+margin-bottom:20px;
+}
+
+.hero-text p{
+font-size:18px;
+line-height:32px;
+margin-bottom:30px;
+}
+
+.hero-text a{
+display:inline-block;
+background:#fff;
+color:#0d6efd;
+padding:15px 35px;
+text-decoration:none;
+border-radius:40px;
+font-weight:600;
+transition:.4s;
+}
+
+.hero-text a:hover{
+transform:translateY(-5px);
+}
+
+.hero img{
+
+width:100%;
+
+max-width:500px;
+
+border-radius:25px;
+
+box-shadow:0 25px 40px rgba(0,0,0,.25);
+
+}
+
+/* SECTION */
+
+section{
+padding:80px 8%;
+}
+
+.title{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+color:#0d6efd;
+}
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+}
+
+.card{
+
+background:white;
+
+padding:35px;
+
+border-radius:20px;
+
+text-align:center;
+
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-12px);
+
+}
+
+.card i{
+
+font-size:45px;
+
+color:#0d6efd;
+
+margin-bottom:20px;
+
+}
+
+.card h3{
+margin-bottom:15px;
+}
+
+.card p{
+line-height:28px;
+color:#666;
+}
+
+/* STATS */
+
+.stats{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:25px;
+
+}
+
+.stat{
+
+background:white;
+
+padding:35px;
+
+text-align:center;
+
+border-radius:20px;
+
+transition:.4s;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.stat:hover{
+
+background:#0d6efd;
+
+color:white;
+
+}
+
+.stat h2{
+font-size:42px;
+margin-bottom:10px;
+}
+
+/* DIRECTOR */
+
+.director{
+
+display:flex;
+
+align-items:center;
+
+gap:50px;
+
+flex-wrap:wrap;
+
+}
+
+.director img{
+
+width:320px;
+
+border-radius:20px;
+
+box-shadow:0 15px 35px rgba(0,0,0,.2);
+
+}
+
+.director-text{
+flex:1;
+}
+
+.director-text h2{
+color:#0d6efd;
+margin-bottom:20px;
+}
+
+.director-text p{
+line-height:32px;
+color:#555;
+}
+
+/* FOOTER */
+
+footer{
+
+background:#111827;
+
+color:white;
+
+padding:50px 8%;
+
+text-align:center;
+
+}
+
+footer h2{
+
+margin-bottom:15px;
+
+}
+
+footer p{
+
+color:#ddd;
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+header{
+
+flex-direction:column;
+
+}
+
+nav ul{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+margin-top:15px;
+
+}
+
+.hero{
+
+text-align:center;
+
+}
+
+.hero-text h1{
+
+font-size:40px;
+
+}
+
+.hero img{
+
+margin:auto;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.hero-text h1{
+
+font-size:32px;
+
+}
+
+.title{
+
+font-size:30px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Bright Future</div>
+
+<nav>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="courses.html">Courses</a></li>
+
+<li><a href="faculty.html">Faculty</a></li>
+
+<li><a href="gallery.html">Gallery</a></li>
+
+<li><a href="results.html">Results</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+<li><a href="login.html">Login</a></li>
+
+<li><a href="register.html" class="btn">Register</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>About Bright Future Coaching</h1>
+
+<p>
+
+Bright Future Coaching Institute is dedicated to providing high-quality education for students preparing for competitive exams. Our expert faculty, modern classrooms, and personalized mentoring help students achieve their dreams.
+
+</p>
+
+<a href="register.html">Join Now</a>
+
+</div>
+
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900" alt="Students">
+
+</section>
+
+<section>
+
+<h2 class="title">Our Mission & Vision</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<i class="fa-solid fa-bullseye"></i>
+
+<h3>Mission</h3>
+
+<p>
+
+To provide quality education that empowers students to achieve academic excellence and build successful careers.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-eye"></i>
+
+<h3>Vision</h3>
+
+<p>
+
+To become India's most trusted coaching institute through innovation, discipline, and outstanding results.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-award"></i>
+
+<h3>Achievements</h3>
+
+<p>
+
+More than 15,000 successful students, 250+ experienced teachers, and thousands of selections every year.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">Institute Statistics</h2>
+
+<div class="stats">
+
+<div class="stat">
+<h2>15K+</h2>
+<p>Students</p>
+</div>
+
+<div class="stat">
+<h2>250+</h2>
+<p>Faculty</p>
+</div>
+
+<div class="stat">
+<h2>98%</h2>
+<p>Success Rate</p>
+</div>
+
+<div class="stat">
+<h2>4.9★</h2>
+<p>Google Rating</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="director">
+
+<img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600" alt="Director">
+
+<div class="director-text">
+
+<h2>Director's Message</h2>
+
+<p>
+
+"We believe every student has unlimited potential. Our aim is to guide, motivate, and prepare students with the best academic environment so they can achieve success in every competitive examination."
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>Bright Future Coaching Institute</h2>
+
+<p>Empowering Students | Building Careers | Creating Success</p>
+
+<p>© 2026 Bright Future Coaching. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>
