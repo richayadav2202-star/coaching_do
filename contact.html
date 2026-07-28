@@ -1,356 +1,459 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us | Bright Future Coaching</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Bright Future Coaching Institute</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        /* Modern Premium Palette & Variables */
+        :root {
+            --bg-dark: #070B19;
+            --bg-card: #0F172A;
+            --navy-primary: #0A1128;
+            --gold-accent: #D4AF37;
+            --gold-hover: #F3E5AB;
+            --text-light: #F8FAFC;
+            --text-muted: #94A3B8;
+            --glass-bg: rgba(15, 23, 42, 0.75);
+            --glass-border: rgba(212, 175, 55, 0.2);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
-<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-body{
-background:#f4f7fb;
-overflow-x:hidden;
-}
+        h1, h2, h3, .brand-font {
+            font-family: 'Playfair Display', serif;
+        }
 
-/*================ NAVBAR ================*/
+        /* Fixed Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 8%;
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--glass-border);
+            z-index: 1000;
+        }
 
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 8%;
-background:#fff;
-box-shadow:0 8px 25px rgba(0,0,0,.08);
-position:sticky;
-top:0;
-z-index:999;
-}
+        .logo h2 {
+            font-size: 1.8rem;
+            color: #fff;
+            font-weight: 700;
+        }
 
-.logo{
-font-size:30px;
-font-weight:700;
-color:#0d6efd;
-}
+        .logo h2 span {
+            color: var(--gold-accent);
+        }
 
-nav ul{
-display:flex;
-list-style:none;
-gap:25px;
-}
+        nav ul {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            gap: 24px;
+        }
 
-nav a{
-text-decoration:none;
-color:#222;
-font-weight:600;
-transition:.3s;
-}
+        nav ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
 
-nav a:hover{
-color:#0d6efd;
-}
+        nav ul li a:hover {
+            color: var(--gold-accent);
+        }
 
-.register{
-background:#ff6b00;
-padding:10px 22px;
-border-radius:30px;
-color:#fff!important;
-}
+        nav ul li a.register-btn {
+            background: linear-gradient(135deg, var(--gold-accent), #B38728);
+            color: #000;
+            padding: 10px 22px;
+            border-radius: 30px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
 
-/*================ HERO ================*/
+        nav ul li a.register-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+            color: #000;
+        }
 
-.hero{
-height:45vh;
-display:flex;
-justify-content:center;
-align-items:center;
-flex-direction:column;
-text-align:center;
-background:
-linear-gradient(rgba(13,110,253,.85),rgba(13,110,253,.85)),
-url("https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1600");
-background-size:cover;
-background-position:center;
-color:#fff;
-}
+        /* Hero Section */
+        .hero {
+            padding: 160px 8% 60px;
+            text-align: center;
+            background: radial-gradient(circle at top center, rgba(212, 175, 55, 0.12), transparent 60%);
+        }
 
-.hero h1{
-font-size:55px;
-margin-bottom:15px;
-}
+        .badge {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.15);
+            border: 1px solid var(--gold-accent);
+            color: var(--gold-accent);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
 
-.hero p{
-font-size:18px;
-max-width:700px;
-line-height:30px;
-}
+        .hero h1 {
+            font-size: 3.5rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
 
-/*================ CONTACT INFO ================*/
+        .hero h1 span {
+            color: var(--gold-accent);
+            font-style: italic;
+        }
 
-.contact-info{
-padding:70px 8%;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-}
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 650px;
+            margin: 0 auto;
+        }
 
-.info-box{
-background:#fff;
-padding:35px;
-text-align:center;
-border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,.08);
-transition:.4s;
-}
+        /* Contact Cards Section */
+        .contact-info {
+            padding: 40px 8% 60px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
 
-.info-box:hover{
-transform:translateY(-10px);
-}
+        .info-box {
+            background: var(--bg-card);
+            border: 1px solid var(--glass-border);
+            padding: 35px 25px;
+            text-align: center;
+            border-radius: 16px;
+            transition: var(--transition);
+        }
 
-.info-box i{
-font-size:45px;
-color:#0d6efd;
-margin-bottom:20px;
-}
+        .info-box:hover {
+            transform: translateY(-8px);
+            border-color: var(--gold-accent);
+        }
 
-.info-box h3{
-margin-bottom:15px;
-color:#0d6efd;
-}
+        .info-box i {
+            font-size: 2.2rem;
+            color: var(--gold-accent);
+            margin-bottom: 18px;
+        }
 
-.info-box p{
-color:#666;
-line-height:28px;
-}
+        .info-box h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
 
-/*================ FORM ================*/
+        .info-box p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
 
-.container{
-padding:20px 8% 70px;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-}
+        /* Form & Map Container */
+        .container {
+            padding: 0 8% 80px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
 
-.form-box{
-background:#fff;
-padding:35px;
-border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,.08);
-}
+        .form-box {
+            background: var(--bg-card);
+            border: 1px solid var(--glass-border);
+            padding: 40px;
+            border-radius: 20px;
+        }
 
-.form-box h2{
-margin-bottom:20px;
-color:#0d6efd;
-}
+        .form-box h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
 
-input,textarea{
-width:100%;
-padding:15px;
-margin:12px 0;
-border:1px solid #ddd;
-border-radius:10px;
-font-size:16px;
-outline:none;
-}
+        .form-box p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+        }
 
-textarea{
-height:150px;
-resize:none;
-}
+        .input-group {
+            margin-bottom: 18px;
+        }
 
-button{
-width:100%;
-padding:15px;
-border:none;
-background:#0d6efd;
-color:#fff;
-font-size:18px;
-border-radius:10px;
-cursor:pointer;
-transition:.3s;
-}
+        input, textarea {
+            width: 100%;
+            padding: 14px 18px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--glass-border);
+            border-radius: 10px;
+            font-size: 0.95rem;
+            color: var(--text-light);
+            outline: none;
+            transition: var(--transition);
+        }
 
-button:hover{
-background:#ff6b00;
-}
+        input::placeholder, textarea::placeholder {
+            color: #64748B;
+        }
 
-/*================ MAP ================*/
+        input:focus, textarea:focus {
+            border-color: var(--gold-accent);
+            background: rgba(212, 175, 55, 0.05);
+        }
 
-.map iframe{
-width:100%;
-height:100%;
-min-height:450px;
-border:none;
-border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,.08);
-}
+        textarea {
+            height: 140px;
+            resize: none;
+        }
 
-/*================ FOOTER ================*/
+        button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            background: linear-gradient(135deg, var(--gold-accent), #B38728);
+            color: #000;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
 
-footer{
-background:#111827;
-color:white;
-text-align:center;
-padding:40px;
-margin-top:60px;
-}
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
 
-/*================ RESPONSIVE ================*/
+        /* Map Section */
+        .map {
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+            height: 100%;
+            min-height: 420px;
+        }
 
-@media(max-width:900px){
+        .map iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            filter: grayscale(80%) invert(90%) contrast(120%);
+        }
 
-header{
-flex-direction:column;
-}
+        /* Footer */
+        footer {
+            background: var(--navy-primary);
+            border-top: 1px solid var(--glass-border);
+            padding: 60px 8% 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+        }
 
-nav ul{
-flex-wrap:wrap;
-justify-content:center;
-margin-top:15px;
-}
+        footer h2 {
+            color: var(--gold-accent);
+            margin-bottom: 15px;
+        }
 
-.hero h1{
-font-size:38px;
-}
+        footer h3 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
 
-.container{
-grid-template-columns:1fr;
-}
+        footer p, footer ul li a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            display: block;
+        }
 
-}
+        footer ul {
+            list-style: none;
+        }
 
-</style>
+        footer ul li a:hover {
+            color: var(--gold-accent);
+        }
 
+        .footer-bottom {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            header {
+                flex-direction: column;
+            }
+
+            .hero {
+                padding-top: 130px;
+            }
+
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .map {
+                min-height: 350px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
+    <!-- Fixed Header -->
+    <header>
+        <div class="logo">
+            <h2>Bright <span>Future</span></h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="faculty.html">Faculty</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="results.html">Results</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html" class="register-btn">Register</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<div class="logo">Bright Future</div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <span class="badge"><i class="fa-solid fa-headset"></i> We're Here To Help</span>
+        <h1>Get In <span>Touch</span></h1>
+        <p>Have questions regarding admission, courses, or batch timings? Reach out to us today and our academic counselors will guide you.</p>
+    </section>
 
-<nav>
+    <!-- Contact Cards -->
+    <section class="contact-info">
+        <div class="info-box">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Visit Our Campus</h3>
+            <p>Hazratganj, Lucknow,<br>Uttar Pradesh, India</p>
+        </div>
 
-<ul>
+        <div class="info-box">
+            <i class="fas fa-phone"></i>
+            <h3>Call Us Direct</h3>
+            <p>+91 98765 43210<br>+91 522 1234567</p>
+        </div>
 
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="courses.html">Courses</a></li>
-<li><a href="faculty.html">Faculty</a></li>
-<li><a href="gallery.html">Gallery</a></li>
-<li><a href="results.html">Results</a></li>
-<li><a href="contact.html">Contact</a></li>
-<li><a href="login.html">Login</a></li>
-<li><a href="register.html" class="register">Register</a></li>
+        <div class="info-box">
+            <i class="fas fa-envelope"></i>
+            <h3>Email Support</h3>
+            <p>info@brightfuture.com<br>admissions@brightfuture.com</p>
+        </div>
+    </section>
 
-</ul>
+    <!-- Form and Map Container -->
+    <section class="container">
+        <div class="form-box">
+            <h2>Send Us A Message</h2>
+            <p>Fill out the form below and we will get back to you within 24 hours.</p>
+            <form>
+                <div class="input-group">
+                    <input type="text" placeholder="Your Full Name" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+                <div class="input-group">
+                    <input type="tel" placeholder="Mobile Number" required>
+                </div>
+                <div class="input-group">
+                    <textarea placeholder="Write Your Message or Inquiry Here..." required></textarea>
+                </div>
+                <button type="submit">Submit Inquiry <i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+        </div>
 
-</nav>
+        <div class="map">
+            <iframe 
+                src="https://www.google.com/maps?q=Hazratganj,Lucknow&output=embed" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </section>
 
-</header>
-
-<section class="hero">
-
-<h1>Contact Us</h1>
-
-<p>
-
-Have questions? We'd love to hear from you. Get in touch with Bright Future Coaching today.
-
-</p>
-
-</section>
-
-<section class="contact-info">
-
-<div class="info-box">
-
-<i class="fas fa-map-marker-alt"></i>
-
-<h3>Address</h3>
-
-<p>Hazratganj, Lucknow, Uttar Pradesh</p>
-
-</div>
-
-<div class="info-box">
-
-<i class="fas fa-phone"></i>
-
-<h3>Phone</h3>
-
-<p>+91 9876543210</p>
-
-</div>
-
-<div class="info-box">
-
-<i class="fas fa-envelope"></i>
-
-<h3>Email</h3>
-
-<p>info@brightfuture.com</p>
-
-</div>
-
-</section>
-
-<section class="container">
-
-<div class="form-box">
-
-<h2>Send Message</h2>
-
-<form>
-
-<input type="text" placeholder="Your Name" required>
-
-<input type="email" placeholder="Email Address" required>
-
-<input type="tel" placeholder="Mobile Number">
-
-<textarea placeholder="Write Your Message"></textarea>
-
-<button type="submit">Send Message</button>
-
-</form>
-
-</div>
-
-<div class="map">
-
-<iframe
-src="https://www.google.com/maps?q=Lucknow&output=embed"
-loading="lazy">
-</iframe>
-
-</div>
-
-</section>
-
-<footer>
-
-<h2>Bright Future Coaching Institute</h2>
-
-<p>Your Success Is Our Mission</p>
-
-<p>© 2026 Bright Future Coaching. All Rights Reserved.</p>
-
-</footer>
+    <!-- Footer -->
+    <footer>
+        <div>
+            <h2>Bright Future</h2>
+            <p>Your Success is Our Mission. Empowering Students | Building Careers | Creating Success.</p>
+        </div>
+        <div>
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="courses.html">Our Courses</a></li>
+                <li><a href="faculty.html">Expert Faculty</a></li>
+                <li><a href="results.html">Top Results</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Contact Us</h3>
+            <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+            <p><i class="fa-solid fa-envelope"></i> info@brightfuture.com</p>
+            <p><i class="fa-solid fa-location-dot"></i> Hazratganj, Lucknow, India</p>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bright Future Coaching Institute. All Rights Reserved.</p>
+        </div>
+    </footer>
 
 </body>
 </html>

@@ -1,430 +1,467 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Courses | Bright Future Coaching</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-body{
-background:#f5f7fb;
-}
-
-/* Navbar */
-
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 8%;
-background:#fff;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-position:sticky;
-top:0;
-z-index:999;
-}
-
-.logo{
-font-size:30px;
-font-weight:700;
-color:#0d6efd;
-}
-
-nav ul{
-display:flex;
-list-style:none;
-gap:25px;
-}
-
-nav a{
-text-decoration:none;
-color:#333;
-font-weight:600;
-transition:.3s;
-}
-
-nav a:hover{
-color:#0d6efd;
-}
-
-.register{
-background:#ff6b00;
-padding:10px 22px;
-border-radius:30px;
-color:#fff!important;
-}
-
-/* Hero */
-
-.hero{
-
-height:55vh;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-flex-direction:column;
-
-text-align:center;
-
-background:linear-gradient(rgba(13,110,253,.85),rgba(13,110,253,.85)),
-url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600');
-
-background-size:cover;
-
-background-position:center;
-
-color:white;
-
-}
-
-.hero h1{
-font-size:55px;
-margin-bottom:15px;
-}
-
-.hero p{
-font-size:20px;
-max-width:700px;
-line-height:32px;
-}
-
-/* Courses */
-
-.container{
-padding:80px 8%;
-}
-
-.title{
-text-align:center;
-font-size:42px;
-color:#0d6efd;
-margin-bottom:50px;
-}
-
-.course-grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-
-gap:30px;
-
-}
-
-.card{
-
-background:#fff;
-
-border-radius:20px;
-
-overflow:hidden;
-
-box-shadow:0 15px 35px rgba(0,0,0,.08);
-
-transition:.4s;
-
-}
-
-.card:hover{
-
-transform:translateY(-12px);
-
-}
-
-.card img{
-
-width:100%;
-
-height:220px;
-
-object-fit:cover;
-
-transition:.5s;
-
-}
-
-.card:hover img{
-
-transform:scale(1.08);
-
-}
-
-.content{
-
-padding:25px;
-
-}
-
-.content h3{
-
-margin-bottom:10px;
-
-color:#0d6efd;
-
-}
-
-.content p{
-
-color:#666;
-
-line-height:28px;
-
-margin-bottom:18px;
-
-}
-
-.info{
-
-display:flex;
-
-justify-content:space-between;
-
-margin-bottom:20px;
-
-font-weight:600;
-
-}
-
-.btn{
-
-display:inline-block;
-
-background:#0d6efd;
-
-color:#fff;
-
-padding:12px 28px;
-
-text-decoration:none;
-
-border-radius:30px;
-
-transition:.4s;
-
-}
-
-.btn:hover{
-
-background:#ff6b00;
-
-}
-
-/* Footer */
-
-footer{
-background:#111827;
-color:white;
-text-align:center;
-padding:40px;
-margin-top:70px;
-}
-
-/* Responsive */
-
-@media(max-width:900px){
-
-header{
-flex-direction:column;
-}
-
-nav ul{
-flex-wrap:wrap;
-justify-content:center;
-margin-top:15px;
-}
-
-.hero h1{
-font-size:38px;
-}
-
-.hero p{
-font-size:17px;
-}
-
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popular Courses | Bright Future Coaching Institute</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <style>
+        /* Modern Premium Palette & CSS Variables */
+        :root {
+            --bg-dark: #070B19;
+            --bg-card: #0F172A;
+            --navy-primary: #0A1128;
+            --gold-accent: #D4AF37;
+            --gold-hover: #F3E5AB;
+            --text-light: #F8FAFC;
+            --text-muted: #94A3B8;
+            --glass-bg: rgba(15, 23, 42, 0.75);
+            --glass-border: rgba(212, 175, 55, 0.2);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .brand-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Fixed Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 8%;
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--glass-border);
+            z-index: 1000;
+        }
+
+        .logo h2 {
+            font-size: 1.8rem;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        .logo h2 span {
+            color: var(--gold-accent);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            gap: 24px;
+        }
+
+        nav ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover {
+            color: var(--gold-accent);
+        }
+
+        nav ul li a.register-btn {
+            background: linear-gradient(135deg, var(--gold-accent), #B38728);
+            color: #000;
+            padding: 10px 22px;
+            border-radius: 30px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        nav ul li a.register-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+            color: #000;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 160px 8% 60px;
+            text-align: center;
+            background: radial-gradient(circle at top center, rgba(212, 175, 55, 0.12), transparent 60%);
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.15);
+            border: 1px solid var(--gold-accent);
+            color: var(--gold-accent);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: var(--gold-accent);
+            font-style: italic;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        /* Courses Container */
+        .container {
+            padding: 40px 8% 80px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #fff;
+        }
+
+        .section-title p {
+            color: var(--text-muted);
+            margin-top: 8px;
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: var(--gold-accent);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .img-container {
+            width: 100%;
+            height: 210px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover img {
+            transform: scale(1.08);
+        }
+
+        .content {
+            padding: 28px 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            color: #fff;
+        }
+
+        .content p {
+            color: var(--text-muted);
+            line-height: 1.7;
+            font-size: 0.95rem;
+            margin-bottom: 22px;
+            flex-grow: 1;
+        }
+
+        .info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            margin-bottom: 22px;
+            font-size: 0.9rem;
+        }
+
+        .info .duration {
+            color: var(--text-muted);
+        }
+
+        .info .duration i {
+            color: var(--gold-accent);
+            margin-right: 6px;
+        }
+
+        .info .price {
+            color: var(--gold-accent);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .btn-card {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, var(--gold-accent), #B38728);
+            color: #000;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .btn-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--navy-primary);
+            border-top: 1px solid var(--glass-border);
+            padding: 60px 8% 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+        }
+
+        footer h2 {
+            color: var(--gold-accent);
+            margin-bottom: 15px;
+        }
+
+        footer h3 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        footer p, footer ul li a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer ul li a:hover {
+            color: var(--gold-accent);
+        }
+
+        .footer-bottom {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            header {
+                flex-direction: column;
+            }
+
+            .hero {
+                padding-top: 130px;
+            }
+
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
-
-<div class="logo">Bright Future</div>
-
-<nav>
-
-<ul>
-
-<li><a href="index.html">Home</a></li>
-
-<li><a href="about.html">About</a></li>
-
-<li><a href="courses.html">Courses</a></li>
-
-<li><a href="faculty.html">Faculty</a></li>
-
-<li><a href="gallery.html">Gallery</a></li>
-
-<li><a href="results.html">Results</a></li>
-
-<li><a href="contact.html">Contact</a></li>
-
-<li><a href="login.html">Login</a></li>
-
-<li><a href="register.html" class="register">Register</a></li>
-
-</ul>
-
-</nav>
-
-</header>
-
-<section class="hero">
-
-<h1>Our Popular Courses</h1>
-
-<p>
-
-Choose the best course and prepare with India's top faculty.
-
-</p>
-
-</section>
-
-<section class="container">
-
-<h2 class="title">Top Courses</h2>
-
-<div class="course-grid">
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=700">
-
-<div class="content">
-
-<h3>IIT-JEE</h3>
-
-<p>Complete preparation for JEE Main & Advanced with expert faculty.</p>
-
-<div class="info">
-
-<span>Duration: 2 Years</span>
-
-<span>₹55,000</span>
-
-</div>
-
-<a href="register.html" class="btn">Enroll Now</a>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=700">
-
-<div class="content">
-
-<h3>NEET</h3>
-
-<p>Medical entrance preparation with regular tests and mentoring.</p>
-
-<div class="info">
-
-<span>Duration: 2 Years</span>
-
-<span>₹60,000</span>
-
-</div>
-
-<a href="register.html" class="btn">Enroll Now</a>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?w=700">
-
-<div class="content">
-
-<h3>SSC</h3>
-
-<p>SSC CGL, CHSL & MTS preparation with live practice sessions.</p>
-
-<div class="info">
-
-<span>Duration: 1 Year</span>
-
-<span>₹25,000</span>
-
-</div>
-
-<a href="register.html" class="btn">Enroll Now</a>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=700">
-
-<div class="content">
-
-<h3>Banking</h3>
-
-<p>IBPS, SBI PO & Clerk preparation with mock interviews.</p>
-
-<div class="info">
-
-<span>Duration: 1 Year</span>
-
-<span>₹28,000</span>
-
-</div>
-
-<a href="register.html" class="btn">Enroll Now</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<footer>
-
-<h2>Bright Future Coaching Institute</h2>
-
-<p>Your Success is Our Mission</p>
-
-</footer>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h2>Bright <span>Future</span></h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="faculty.html">Faculty</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="results.html">Results</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html" class="register-btn">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <span class="badge"><i class="fa-solid fa-book-open-reader"></i> Comprehensive Programs</span>
+        <h1>Explore Our <span>Courses</span></h1>
+        <p>Choose the right academic program designed by India's top educators to help you achieve rank excellence.</p>
+    </section>
+
+    <!-- Courses Grid Section -->
+    <section class="container">
+        <div class="section-title">
+            <h2>Top Rated Batches</h2>
+            <p>Structured curriculum, interactive study modules, and rigorous test series</p>
+        </div>
+
+        <div class="course-grid">
+
+            <!-- Card 1 -->
+            <div class="card">
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=700" alt="IIT JEE Course">
+                </div>
+                <div class="content">
+                    <h3>IIT-JEE (Main & Advanced)</h3>
+                    <p>Complete preparation covering Physics, Chemistry, and Math with regular doubt solving & mock tests.</p>
+                    <div class="info">
+                        <span class="duration"><i class="fa-regular fa-clock"></i> 2 Years</span>
+                        <span class="price">₹55,000</span>
+                    </div>
+                    <a href="register.html" class="btn-card">Enroll Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=700" alt="NEET Course">
+                </div>
+                <div class="content">
+                    <h3>NEET Medical Entrance</h3>
+                    <p>In-depth preparation for Biology, Physics & Chemistry tailored specifically for Medical Aspirants.</p>
+                    <div class="info">
+                        <span class="duration"><i class="fa-regular fa-clock"></i> 2 Years</span>
+                        <span class="price">₹60,000</span>
+                    </div>
+                    <a href="register.html" class="btn-card">Enroll Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?w=700" alt="SSC Course">
+                </div>
+                <div class="content">
+                    <h3>SSC (CGL, CHSL, MTS)</h3>
+                    <p>Focused Government examination batch with short-cut math techniques and weekly speed tests.</p>
+                    <div class="info">
+                        <span class="duration"><i class="fa-regular fa-clock"></i> 1 Year</span>
+                        <span class="price">₹25,000</span>
+                    </div>
+                    <a href="register.html" class="btn-card">Enroll Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=700" alt="Banking Course">
+                </div>
+                <div class="content">
+                    <h3>Banking (IBPS, SBI PO & Clerk)</h3>
+                    <p>Comprehensive training covering Quantitative Aptitude, Reasoning, English & Interview preparation.</p>
+                    <div class="info">
+                        <span class="duration"><i class="fa-regular fa-clock"></i> 1 Year</span>
+                        <span class="price">₹28,000</span>
+                    </div>
+                    <a href="register.html" class="btn-card">Enroll Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div>
+            <h2>Bright Future</h2>
+            <p>Your Success is Our Mission. Empowering Students | Building Careers | Creating Success.</p>
+        </div>
+        <div>
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="courses.html">Our Courses</a></li>
+                <li><a href="faculty.html">Expert Faculty</a></li>
+                <li><a href="results.html">Top Results</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Contact Us</h3>
+            <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+            <p><i class="fa-solid fa-envelope"></i> info@brightfuture.com</p>
+            <p><i class="fa-solid fa-location-dot"></i> Lucknow, Uttar Pradesh, India</p>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bright Future Coaching Institute. All Rights Reserved.</p>
+        </div>
+    </footer>
 
 </body>
 </html>

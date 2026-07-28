@@ -1,427 +1,411 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login | Bright Future Coaching</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-body{
-
-height:100vh;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-background:
-linear-gradient(rgba(13,110,253,.75),rgba(13,110,253,.75)),
-url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600");
-
-background-size:cover;
-background-position:center;
-
-overflow:hidden;
-
-}
-
-/* Login Box */
-
-.container{
-
-width:950px;
-
-max-width:95%;
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-background:rgba(255,255,255,.12);
-
-backdrop-filter:blur(15px);
-
-border-radius:25px;
-
-overflow:hidden;
-
-box-shadow:0 20px 50px rgba(0,0,0,.25);
-
-}
-
-/* Left */
-
-.left{
-
-background:linear-gradient(135deg,#0d6efd,#3f8cff);
-
-padding:60px 40px;
-
-color:white;
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-align-items:center;
-
-text-align:center;
-
-}
-
-.left h1{
-
-font-size:40px;
-
-margin-bottom:20px;
-
-}
-
-.left p{
-
-line-height:30px;
-
-font-size:17px;
-
-margin-bottom:25px;
-
-}
-
-.left img{
-
-width:280px;
-
-border-radius:20px;
-
-box-shadow:0 15px 30px rgba(0,0,0,.2);
-
-}
-
-/* Right */
-
-.right{
-
-padding:50px 40px;
-
-background:white;
-
-}
-
-.right h2{
-
-text-align:center;
-
-color:#0d6efd;
-
-margin-bottom:30px;
-
-font-size:32px;
-
-}
-
-.input-box{
-
-position:relative;
-
-margin-bottom:20px;
-
-}
-
-.input-box i{
-
-position:absolute;
-
-left:15px;
-
-top:17px;
-
-color:#0d6efd;
-
-}
-
-.input-box input{
-
-width:100%;
-
-padding:15px 15px 15px 45px;
-
-border:2px solid #ddd;
-
-border-radius:40px;
-
-outline:none;
-
-transition:.3s;
-
-font-size:15px;
-
-}
-
-.input-box input:focus{
-
-border-color:#0d6efd;
-
-}
-
-.options{
-
-display:flex;
-
-justify-content:space-between;
-
-font-size:14px;
-
-margin-bottom:25px;
-
-}
-
-.options a{
-
-text-decoration:none;
-
-color:#0d6efd;
-
-}
-
-button{
-
-width:100%;
-
-padding:15px;
-
-border:none;
-
-border-radius:40px;
-
-background:#0d6efd;
-
-color:white;
-
-font-size:17px;
-
-cursor:pointer;
-
-transition:.4s;
-
-}
-
-button:hover{
-
-background:#ff6b00;
-
-}
-
-.or{
-
-text-align:center;
-
-margin:20px 0;
-
-color:#666;
-
-}
-
-.social{
-
-display:flex;
-
-justify-content:center;
-
-gap:15px;
-
-}
-
-.social a{
-
-width:45px;
-
-height:45px;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-border-radius:50%;
-
-background:#f2f2f2;
-
-color:#0d6efd;
-
-font-size:20px;
-
-text-decoration:none;
-
-transition:.4s;
-
-}
-
-.social a:hover{
-
-background:#0d6efd;
-
-color:white;
-
-transform:translateY(-5px);
-
-}
-
-.register{
-
-text-align:center;
-
-margin-top:25px;
-
-}
-
-.register a{
-
-color:#0d6efd;
-
-text-decoration:none;
-
-font-weight:600;
-
-}
-
-/* Responsive */
-
-@media(max-width:850px){
-
-.container{
-
-grid-template-columns:1fr;
-
-}
-
-.left{
-
-display:none;
-
-}
-
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Bright Future Coaching Institute</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <style>
+        /* Modern Premium Palette & CSS Variables */
+        :root {
+            --bg-dark: #070B19;
+            --bg-card: #0F172A;
+            --navy-primary: #0A1128;
+            --gold-accent: #D4AF37;
+            --gold-hover: #F3E5AB;
+            --text-light: #F8FAFC;
+            --text-muted: #94A3B8;
+            --glass-bg: rgba(15, 23, 42, 0.85);
+            --glass-border: rgba(212, 175, 55, 0.25);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--bg-dark);
+            background-image: radial-gradient(circle at top left, rgba(212, 175, 55, 0.12), transparent 50%),
+                              radial-gradient(circle at bottom right, rgba(10, 17, 40, 0.8), transparent 50%);
+            color: var(--text-light);
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .brand-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Login Container Box */
+        .container {
+            width: 950px;
+            max-width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Left Side */
+        .left {
+            background: linear-gradient(135deg, rgba(10, 17, 40, 0.95), rgba(15, 23, 42, 0.9)), 
+                        url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1000");
+            background-size: cover;
+            background-position: center;
+            padding: 50px 40px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-right: 1px solid var(--glass-border);
+            position: relative;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.15);
+            border: 1px solid var(--gold-accent);
+            color: var(--gold-accent);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .left h1 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .left h1 span {
+            color: var(--gold-accent);
+            font-style: italic;
+        }
+
+        .left p {
+            line-height: 1.7;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .left img {
+            width: 100%;
+            max-width: 280px;
+            border-radius: 16px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Right Side Form */
+        .right {
+            padding: 50px 45px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: var(--bg-card);
+        }
+
+        .right-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .right-header h2 {
+            font-size: 2.2rem;
+            color: #fff;
+        }
+
+        .right-header p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin-top: 5px;
+        }
+
+        .input-box {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .input-box i {
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gold-accent);
+            font-size: 1rem;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 15px 18px 15px 50px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            outline: none;
+            transition: var(--transition);
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        .input-box input::placeholder {
+            color: #64748B;
+        }
+
+        .input-box input:focus {
+            border-color: var(--gold-accent);
+            background: rgba(212, 175, 55, 0.05);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.1);
+        }
+
+        .options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.88rem;
+            margin-bottom: 25px;
+            color: var(--text-muted);
+        }
+
+        .options label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+
+        .options input[type="checkbox"] {
+            accent-color: var(--gold-accent);
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+        }
+
+        .options a {
+            text-decoration: none;
+            color: var(--gold-accent);
+            transition: var(--transition);
+        }
+
+        .options a:hover {
+            color: var(--gold-hover);
+            text-decoration: underline;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--gold-accent), #B38728);
+            color: #000;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+        }
+
+        .or {
+            text-align: center;
+            margin: 22px 0;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            position: relative;
+        }
+
+        .or::before, .or::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 35%;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .or::before { left: 0; }
+        .or::after { right: 0; }
+
+        .social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social a {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--glass-border);
+            color: var(--text-light);
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social a:hover {
+            background: var(--gold-accent);
+            color: #000;
+            border-color: var(--gold-accent);
+            transform: translateY(-3px);
+        }
+
+        .register {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .register a {
+            color: var(--gold-accent);
+            text-decoration: none;
+            font-weight: 600;
+            margin-left: 5px;
+            transition: var(--transition);
+        }
+
+        .register a:hover {
+            color: var(--gold-hover);
+            text-decoration: underline;
+        }
+
+        /* Home Nav Button */
+        .home-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: var(--transition);
+        }
+
+        .home-btn:hover {
+            color: var(--gold-accent);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 850px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .left {
+                display: none;
+            }
+
+            .right {
+                padding: 40px 25px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="container">
+    <div class="container">
 
-<div class="left">
+        <!-- Left Showcase Side -->
+        <div class="left">
+            <a href="index.html" class="home-btn"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+            <span class="badge"><i class="fa-solid fa-shield-halved"></i> Student Portal</span>
+            <h1>Welcome Back to <span>Bright Future</span></h1>
+            <p>Access your personalized learning dashboard, online tests, performance analytics, and study materials.</p>
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=700" alt="Students">
+        </div>
 
-<h1>Bright Future Coaching</h1>
+        <!-- Right Form Side -->
+        <div class="right">
 
-<p>
+            <div class="right-header">
+                <h2>Account Login</h2>
+                <p>Enter your credentials to access your student portal</p>
+            </div>
 
-Welcome Back!
+            <form>
+                <div class="input-group">
+                    <div class="input-box">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" placeholder="Email Address or Student ID" required>
+                    </div>
+                </div>
 
-Login to continue your learning journey with India's Best Coaching Institute.
+                <div class="input-group">
+                    <div class="input-box">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Password" required>
+                    </div>
+                </div>
 
-</p>
+                <div class="options">
+                    <label>
+                        <input type="checkbox"> Remember Me
+                    </label>
+                    <a href="#">Forgot Password?</a>
+                </div>
 
-<img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=700" alt="Students">
+                <button type="submit">
+                    Login To Portal <i class="fa-solid fa-right-to-bracket"></i>
+                </button>
 
-</div>
+                <div class="or">OR LOGIN WITH</div>
 
-<div class="right">
+                <div class="social">
+                    <a href="#" title="Login with Google"><i class="fab fa-google"></i></a>
+                    <a href="#" title="Login with Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" title="Login with LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
 
-<h2>Login</h2>
+                <div class="register">
+                    Don't have an account?
+                    <a href="register.html">Register Here</a>
+                </div>
+            </form>
 
-<form>
+        </div>
 
-<div class="input-box">
-
-<i class="fas fa-envelope"></i>
-
-<input type="email" placeholder="Email Address" required>
-
-</div>
-
-<div class="input-box">
-
-<i class="fas fa-lock"></i>
-
-<input type="password" placeholder="Password" required>
-
-</div>
-
-<div class="options">
-
-<label>
-
-<input type="checkbox">
-
- Remember Me
-
-</label>
-
-<a href="#">Forgot Password?</a>
-
-</div>
-
-<button type="submit">
-
-Login Now
-
-</button>
-
-<div class="or">
-
------------ OR -----------
-
-</div>
-
-<div class="social">
-
-<a href="#"><i class="fab fa-google"></i></a>
-
-<a href="#"><i class="fab fa-facebook-f"></i></a>
-
-<a href="#"><i class="fab fa-linkedin-in"></i></a>
-
-</div>
-
-<div class="register">
-
-Don't have an account?
-
-<a href="register.html">
-
-Register Here
-
-</a>
-
-</div>
-
-</form>
-
-</div>
-
-</div>
+    </div>
 
 </body>
 </html>

@@ -1,408 +1,561 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Results | Bright Future Coaching</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Results & Top Rankers | Bright Future Coaching</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
 
-<style>
+    <style>
+        /* Modern Premium Palette & CSS Variables */
+        :root {
+            --bg-dark: #070B19;
+            --bg-card: #0F172A;
+            --navy-primary: #0A1128;
+            --gold-accent: #D4AF37;
+            --gold-hover: #F3E5AB;
+            --text-light: #F8FAFC;
+            --text-muted: #94A3B8;
+            --glass-bg: rgba(15, 23, 42, 0.75);
+            --glass-border: rgba(212, 175, 55, 0.2);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
-body{
-background:#f5f7fb;
-color:#333;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-/* Navbar */
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 8%;
-background:#fff;
-box-shadow:0 8px 20px rgba(0,0,0,.08);
-position:sticky;
-top:0;
-z-index:999;
-}
+        h1, h2, h3, .brand-font {
+            font-family: 'Playfair Display', serif;
+        }
 
-.logo{
-font-size:28px;
-font-weight:700;
-color:#0d6efd;
-}
+        /* Fixed Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 8%;
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--glass-border);
+            z-index: 1000;
+        }
 
-nav ul{
-display:flex;
-list-style:none;
-gap:20px;
-}
+        .logo h2 {
+            font-size: 1.8rem;
+            color: #fff;
+            font-weight: 700;
+        }
 
-nav a{
-text-decoration:none;
-color:#333;
-font-weight:600;
-transition:.3s;
-}
+        .logo h2 span {
+            color: var(--gold-accent);
+        }
 
-nav a:hover{
-color:#0d6efd;
-}
+        nav ul {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            gap: 24px;
+        }
 
-.register{
-background:#ff6b00;
-color:#fff!important;
-padding:10px 20px;
-border-radius:25px;
-}
+        nav ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
 
-/* Hero */
+        nav ul li a:hover {
+            color: var(--gold-accent);
+        }
 
-.hero{
-background:linear-gradient(rgba(13,110,253,.85),rgba(13,110,253,.85)),
-url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1600');
-background-size:cover;
-background-position:center;
-height:45vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-color:#fff;
-padding:20px;
-}
+        nav ul li a.register-btn {
+            background: linear-gradient(135deg, var(--gold-accent), #B38728);
+            color: #000;
+            padding: 10px 22px;
+            border-radius: 30px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
 
-.hero h1{
-font-size:52px;
-margin-bottom:15px;
-}
+        nav ul li a.register-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+            color: #000;
+        }
 
-.hero p{
-font-size:18px;
-max-width:700px;
-}
+        /* Hero Section */
+        .hero {
+            padding: 160px 8% 60px;
+            text-align: center;
+            background: radial-gradient(circle at top center, rgba(212, 175, 55, 0.12), transparent 60%);
+        }
 
-/* Search */
+        .badge {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.15);
+            border: 1px solid var(--gold-accent);
+            color: var(--gold-accent);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
 
-.search{
-padding:60px 8%;
-text-align:center;
-}
+        .hero h1 {
+            font-size: 3.5rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
 
-.search input{
-width:350px;
-max-width:90%;
-padding:15px;
-border-radius:30px;
-border:2px solid #0d6efd;
-font-size:16px;
-outline:none;
-}
+        .hero h1 span {
+            color: var(--gold-accent);
+            font-style: italic;
+        }
 
-.search button{
-padding:15px 30px;
-border:none;
-background:#0d6efd;
-color:#fff;
-border-radius:30px;
-margin-left:10px;
-cursor:pointer;
-transition:.3s;
-}
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 650px;
+            margin: 0 auto;
+        }
 
-.search button:hover{
-background:#ff6b00;
-}
+        /* Search Section */
+        .search {
+            padding: 20px 8% 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
 
-/* Table */
+        .search-box {
+            position: relative;
+            width: 380px;
+            max-width: 100%;
+        }
 
-.table-section{
-padding:20px 8% 80px;
-overflow-x:auto;
-}
+        .search-box i {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gold-accent);
+        }
 
-table{
-width:100%;
-border-collapse:collapse;
-background:#fff;
-border-radius:15px;
-overflow:hidden;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-}
+        .search input {
+            width: 100%;
+            padding: 16px 20px 16px 50px;
+            border-radius: 30px;
+            border: 1px solid var(--glass-border);
+            background: var(--bg-card);
+            color: var(--text-light);
+            font-size: 0.95rem;
+            outline: none;
+            transition: var(--transition);
+        }
 
-th{
-background:#0d6efd;
-color:#fff;
-padding:18px;
-}
+        .search input:focus {
+            border-color: var(--gold-accent);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+        }
 
-td{
-padding:16px;
-text-align:center;
-border-bottom:1px solid #eee;
-}
+        .search button {
+            padding: 16px 32px;
+            border: none;
+            background: linear-gradient(135deg, var(--gold-accent), #B38728);
+            color: #000;
+            font-weight: 600;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
 
-tr:hover{
-background:#f2f8ff;
-}
+        .search button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+        }
 
-/* Rankers */
+        /* Results Table Section */
+        .table-section {
+            padding: 20px 8% 80px;
+            overflow-x: auto;
+        }
 
-.rankers{
-padding:70px 8%;
-}
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: var(--bg-card);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+        }
 
-.rankers h2{
-text-align:center;
-color:#0d6efd;
-margin-bottom:40px;
-font-size:38px;
-}
+        th {
+            background: var(--navy-primary);
+            color: var(--gold-accent);
+            padding: 18px 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            border-bottom: 1px solid var(--glass-border);
+            text-align: center;
+        }
 
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
+        td {
+            padding: 18px 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
 
-.card{
-background:#fff;
-padding:30px;
-text-align:center;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-transition:.4s;
-}
+        tr:last-child td {
+            border-bottom: none;
+        }
 
-.card:hover{
-transform:translateY(-10px);
-}
+        tr:hover td {
+            background: rgba(212, 175, 55, 0.05);
+        }
 
-.card img{
-width:120px;
-height:120px;
-border-radius:50%;
-object-fit:cover;
-margin-bottom:15px;
-}
+        .status-pass {
+            background: rgba(34, 197, 94, 0.15);
+            color: #4ade80;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
 
-.card h3{
-color:#0d6efd;
-margin-bottom:10px;
-}
+        /* Top Rankers Section */
+        .rankers {
+            padding: 60px 8% 100px;
+            background: radial-gradient(circle at bottom center, rgba(212, 175, 55, 0.08), transparent 60%);
+        }
 
-.card span{
-color:#ff6b00;
-font-weight:bold;
-}
+        .rankers h2 {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+        }
 
-/* Footer */
+        .rankers h2 span {
+            color: var(--gold-accent);
+        }
 
-footer{
-background:#111827;
-color:#fff;
-text-align:center;
-padding:40px;
-margin-top:50px;
-}
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
 
-/* Responsive */
+        .card {
+            background: var(--bg-card);
+            padding: 35px 25px;
+            text-align: center;
+            border-radius: 20px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: var(--transition);
+            position: relative;
+        }
 
-@media(max-width:900px){
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: var(--gold-accent);
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.15);
+        }
 
-header{
-flex-direction:column;
-}
+        .card img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 3px solid var(--gold-accent);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+        }
 
-nav ul{
-flex-wrap:wrap;
-justify-content:center;
-margin-top:15px;
-}
+        .card h3 {
+            color: #fff;
+            margin-bottom: 8px;
+            font-size: 1.3rem;
+        }
 
-.hero h1{
-font-size:36px;
-}
+        .card p span {
+            color: var(--gold-accent);
+            font-weight: 700;
+            font-size: 1.1rem;
+            background: rgba(212, 175, 55, 0.1);
+            padding: 4px 14px;
+            border-radius: 20px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            display: inline-block;
+            margin-top: 5px;
+        }
 
-.search button{
-margin-top:15px;
-margin-left:0;
-}
+        /* Footer */
+        footer {
+            background: var(--navy-primary);
+            border-top: 1px solid var(--glass-border);
+            padding: 60px 8% 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+        }
 
-}
+        footer h2 {
+            color: var(--gold-accent);
+            margin-bottom: 15px;
+        }
 
-</style>
+        footer h3 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
 
+        footer p, footer ul li a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer ul li a:hover {
+            color: var(--gold-accent);
+        }
+
+        .footer-bottom {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            header {
+                flex-direction: column;
+            }
+
+            .hero {
+                padding-top: 130px;
+            }
+
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .search {
+                flex-direction: column;
+            }
+
+            .search-box {
+                width: 100%;
+            }
+
+            .search button {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+
+            th, td {
+                padding: 12px 10px;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h2>Bright <span>Future</span></h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="faculty.html">Faculty</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="results.html">Results</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html" class="register-btn">Register</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<div class="logo">Bright Future</div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <span class="badge"><i class="fa-solid fa-trophy"></i> Wall of Fame</span>
+        <h1>Student <span>Results</span></h1>
+        <p>Explore our latest examination results and meet top performers who made us proud.</p>
+    </section>
 
-<nav>
+    <!-- Search Section -->
+    <section class="search">
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Enter Roll Number or Student ID">
+        </div>
+        <button><i class="fa-solid fa-square-poll-vertical"></i> Search Result</button>
+    </section>
 
-<ul>
+    <!-- Results Table Section -->
+    <section class="table-section">
+        <table>
+            <thead>
+                <tr>
+                    <th>Roll No</th>
+                    <th>Student Name</th>
+                    <th>Course</th>
+                    <th>Marks</th>
+                    <th>Rank</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1001</td>
+                    <td>Rahul Sharma</td>
+                    <td>IIT-JEE</td>
+                    <td>98%</td>
+                    <td>AIR-12</td>
+                    <td><span class="status-pass">Passed</span></td>
+                </tr>
+                <tr>
+                    <td>1002</td>
+                    <td>Riya Singh</td>
+                    <td>NEET</td>
+                    <td>97%</td>
+                    <td>AIR-25</td>
+                    <td><span class="status-pass">Passed</span></td>
+                </tr>
+                <tr>
+                    <td>1003</td>
+                    <td>Aman Verma</td>
+                    <td>SSC</td>
+                    <td>94%</td>
+                    <td>State Rank-8</td>
+                    <td><span class="status-pass">Passed</span></td>
+                </tr>
+                <tr>
+                    <td>1004</td>
+                    <td>Priya Yadav</td>
+                    <td>Banking</td>
+                    <td>91%</td>
+                    <td>Top-20</td>
+                    <td><span class="status-pass">Passed</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
 
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="courses.html">Courses</a></li>
-<li><a href="faculty.html">Faculty</a></li>
-<li><a href="gallery.html">Gallery</a></li>
-<li><a href="results.html">Results</a></li>
-<li><a href="contact.html">Contact</a></li>
-<li><a href="login.html">Login</a></li>
-<li><a href="register.html" class="register">Register</a></li>
+    <!-- Top Rankers Section -->
+    <section class="rankers">
+        <h2>🏆 Top <span>Rankers</span></h2>
+        <div class="cards">
+            <div class="card">
+                <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Rahul Sharma">
+                <h3>Rahul Sharma</h3>
+                <p><span>AIR - 12</span></p>
+            </div>
 
-</ul>
+            <div class="card">
+                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Riya Singh">
+                <h3>Riya Singh</h3>
+                <p><span>AIR - 25</span></p>
+            </div>
 
-</nav>
+            <div class="card">
+                <img src="https://randomuser.me/api/portraits/men/61.jpg" alt="Aman Verma">
+                <h3>Aman Verma</h3>
+                <p><span>State Rank - 8</span></p>
+            </div>
+        </div>
+    </section>
 
-</header>
-
-<section class="hero">
-
-<h1>Student Results</h1>
-
-<p>
-
-Check our latest top performers and coaching institute results.
-
-</p>
-
-</section>
-
-<section class="search">
-
-<input type="text" placeholder="Enter Roll Number">
-
-<button>Search Result</button>
-
-</section>
-
-<section class="table-section">
-
-<table>
-
-<tr>
-
-<th>Roll No</th>
-
-<th>Student Name</th>
-
-<th>Course</th>
-
-<th>Marks</th>
-
-<th>Rank</th>
-
-<th>Status</th>
-
-</tr>
-
-<tr>
-<td>1001</td>
-<td>Rahul Sharma</td>
-<td>IIT-JEE</td>
-<td>98%</td>
-<td>AIR-12</td>
-<td>Pass</td>
-</tr>
-
-<tr>
-<td>1002</td>
-<td>Riya Singh</td>
-<td>NEET</td>
-<td>97%</td>
-<td>AIR-25</td>
-<td>Pass</td>
-</tr>
-
-<tr>
-<td>1003</td>
-<td>Aman Verma</td>
-<td>SSC</td>
-<td>94%</td>
-<td>State Rank-8</td>
-<td>Pass</td>
-</tr>
-
-<tr>
-<td>1004</td>
-<td>Priya Yadav</td>
-<td>Banking</td>
-<td>91%</td>
-<td>Top-20</td>
-<td>Pass</td>
-</tr>
-
-</table>
-
-</section>
-
-<section class="rankers">
-
-<h2>🏆 Top Rankers</h2>
-
-<div class="cards">
-
-<div class="card">
-
-<img src="https://randomuser.me/api/portraits/men/45.jpg">
-
-<h3>Rahul Sharma</h3>
-
-<p><span>AIR - 12</span></p>
-
-</div>
-
-<div class="card">
-
-<img src="https://randomuser.me/api/portraits/women/68.jpg">
-
-<h3>Riya Singh</h3>
-
-<p><span>AIR - 25</span></p>
-
-</div>
-
-<div class="card">
-
-<img src="https://randomuser.me/api/portraits/men/61.jpg">
-
-<h3>Aman Verma</h3>
-
-<p><span>State Rank - 8</span></p>
-
-</div>
-
-</div>
-
-</section>
-
-<footer>
-
-<h2>Bright Future Coaching Institute</h2>
-
-<p>Your Success Is Our Mission</p>
-
-<p>© 2026 Bright Future Coaching. All Rights Reserved.</p>
-
-</footer>
+    <!-- Footer -->
+    <footer>
+        <div>
+            <h2>Bright Future</h2>
+            <p>Your Success is Our Mission. Empowering Students | Building Careers | Creating Success.</p>
+        </div>
+        <div>
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="courses.html">Our Courses</a></li>
+                <li><a href="faculty.html">Expert Faculty</a></li>
+                <li><a href="results.html">Top Results</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Contact Us</h3>
+            <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+            <p><i class="fa-solid fa-envelope"></i> info@brightfuture.com</p>
+            <p><i class="fa-solid fa-location-dot"></i> Lucknow, Uttar Pradesh, India</p>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bright Future Coaching Institute. All Rights Reserved.</p>
+        </div>
+    </footer>
 
 </body>
 </html>

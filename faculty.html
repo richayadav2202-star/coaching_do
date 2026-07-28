@@ -1,448 +1,486 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Faculty | Bright Future Coaching</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-body{
-background:#f5f7fb;
-}
-
-/* NAVBAR */
-
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 8%;
-background:#fff;
-box-shadow:0 10px 30px rgba(0,0,0,.08);
-position:sticky;
-top:0;
-z-index:999;
-}
-
-.logo{
-font-size:30px;
-font-weight:700;
-color:#0d6efd;
-}
-
-nav ul{
-display:flex;
-list-style:none;
-gap:25px;
-}
-
-nav ul li a{
-text-decoration:none;
-color:#333;
-font-weight:600;
-transition:.4s;
-}
-
-nav ul li a:hover{
-color:#0d6efd;
-}
-
-.register{
-background:#ff6b00;
-padding:10px 22px;
-border-radius:30px;
-color:white!important;
-}
-
-/* HERO */
-
-.hero{
-
-height:55vh;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-flex-direction:column;
-
-text-align:center;
-
-color:white;
-
-background:linear-gradient(rgba(13,110,253,.85),rgba(13,110,253,.85)),
-url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1600');
-
-background-size:cover;
-
-background-position:center;
-
-}
-
-.hero h1{
-font-size:55px;
-margin-bottom:15px;
-}
-
-.hero p{
-font-size:20px;
-max-width:700px;
-line-height:30px;
-}
-
-/* SECTION */
-
-.container{
-padding:80px 8%;
-}
-
-.title{
-text-align:center;
-font-size:42px;
-color:#0d6efd;
-margin-bottom:50px;
-}
-
-/* FACULTY GRID */
-
-.grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-
-gap:30px;
-
-}
-
-.card{
-
-background:#fff;
-
-border-radius:20px;
-
-overflow:hidden;
-
-box-shadow:0 15px 35px rgba(0,0,0,.08);
-
-transition:.4s;
-
-}
-
-.card:hover{
-
-transform:translateY(-12px);
-
-}
-
-.card img{
-
-width:100%;
-
-height:320px;
-
-object-fit:cover;
-
-transition:.5s;
-
-}
-
-.card:hover img{
-
-transform:scale(1.08);
-
-}
-
-.content{
-
-padding:25px;
-
-text-align:center;
-
-}
-
-.content h3{
-
-color:#0d6efd;
-
-margin-bottom:8px;
-
-}
-
-.subject{
-
-color:#ff6b00;
-
-font-weight:600;
-
-margin-bottom:10px;
-
-}
-
-.content p{
-
-color:#666;
-
-line-height:28px;
-
-margin-bottom:12px;
-
-}
-
-.social{
-
-margin-top:20px;
-
-}
-
-.social a{
-
-display:inline-flex;
-
-justify-content:center;
-
-align-items:center;
-
-width:42px;
-
-height:42px;
-
-border-radius:50%;
-
-background:#0d6efd;
-
-color:white;
-
-text-decoration:none;
-
-margin:5px;
-
-transition:.4s;
-
-}
-
-.social a:hover{
-
-background:#ff6b00;
-
-transform:translateY(-5px);
-
-}
-
-/* FOOTER */
-
-footer{
-
-background:#111827;
-
-color:white;
-
-text-align:center;
-
-padding:40px;
-
-margin-top:60px;
-
-}
-
-/* RESPONSIVE */
-
-@media(max-width:900px){
-
-header{
-flex-direction:column;
-}
-
-nav ul{
-flex-wrap:wrap;
-justify-content:center;
-margin-top:15px;
-}
-
-.hero h1{
-font-size:38px;
-}
-
-.hero p{
-font-size:17px;
-}
-
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert Faculty | Bright Future Coaching Institute</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <style>
+        /* Modern Premium Palette & CSS Variables */
+        :root {
+            --bg-dark: #070B19;
+            --bg-card: #0F172A;
+            --navy-primary: #0A1128;
+            --gold-accent: #D4AF37;
+            --gold-hover: #F3E5AB;
+            --text-light: #F8FAFC;
+            --text-muted: #94A3B8;
+            --glass-bg: rgba(15, 23, 42, 0.75);
+            --glass-border: rgba(212, 175, 55, 0.2);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .brand-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Fixed Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 8%;
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--glass-border);
+            z-index: 1000;
+        }
+
+        .logo h2 {
+            font-size: 1.8rem;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        .logo h2 span {
+            color: var(--gold-accent);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            gap: 24px;
+        }
+
+        nav ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover {
+            color: var(--gold-accent);
+        }
+
+        nav ul li a.register-btn {
+            background: linear-gradient(135deg, var(--gold-accent), #B38728);
+            color: #000;
+            padding: 10px 22px;
+            border-radius: 30px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        nav ul li a.register-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+            color: #000;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 160px 8% 60px;
+            text-align: center;
+            background: radial-gradient(circle at top center, rgba(212, 175, 55, 0.12), transparent 60%);
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.15);
+            border: 1px solid var(--gold-accent);
+            color: var(--gold-accent);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: var(--gold-accent);
+            font-style: italic;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        /* Faculty Section Container */
+        .container {
+            padding: 40px 8% 80px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #fff;
+        }
+
+        .section-title p {
+            color: var(--text-muted);
+            margin-top: 8px;
+        }
+
+        /* Faculty Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: var(--gold-accent);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .img-container {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover img {
+            transform: scale(1.08);
+        }
+
+        .content {
+            padding: 28px 24px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .content h3 {
+            font-size: 1.4rem;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .subject {
+            color: var(--gold-accent);
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 18px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .details {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 12px;
+            border-radius: 10px;
+            margin-bottom: 18px;
+            font-size: 0.9rem;
+        }
+
+        .details p {
+            color: var(--text-muted);
+            margin-bottom: 4px;
+        }
+
+        .details p:last-child {
+            margin-bottom: 0;
+        }
+
+        .details strong {
+            color: #fff;
+        }
+
+        .desc {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        /* Social Icons */
+        .social {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .social a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            color: var(--text-light);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .social a:hover {
+            background: var(--gold-accent);
+            color: #000;
+            border-color: var(--gold-accent);
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--navy-primary);
+            border-top: 1px solid var(--glass-border);
+            padding: 60px 8% 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+        }
+
+        footer h2 {
+            color: var(--gold-accent);
+            margin-bottom: 15px;
+        }
+
+        footer h3 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        footer p, footer ul li a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer ul li a:hover {
+            color: var(--gold-accent);
+        }
+
+        .footer-bottom {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            header {
+                flex-direction: column;
+            }
+
+            .hero {
+                padding-top: 130px;
+            }
+
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
-
-<div class="logo">Bright Future</div>
-
-<nav>
-
-<ul>
-
-<li><a href="index.html">Home</a></li>
-
-<li><a href="about.html">About</a></li>
-
-<li><a href="courses.html">Courses</a></li>
-
-<li><a href="faculty.html">Faculty</a></li>
-
-<li><a href="gallery.html">Gallery</a></li>
-
-<li><a href="results.html">Results</a></li>
-
-<li><a href="contact.html">Contact</a></li>
-
-<li><a href="login.html">Login</a></li>
-
-<li><a href="register.html" class="register">Register</a></li>
-
-</ul>
-
-</nav>
-
-</header>
-
-<section class="hero">
-
-<h1>Meet Our Expert Faculty</h1>
-
-<p>
-
-Learn from India's most experienced teachers and mentors.
-
-</p>
-
-</section>
-
-<section class="container">
-
-<h2 class="title">Our Faculty Members</h2>
-
-<div class="grid">
-
-<div class="card">
-
-<img src="https://randomuser.me/api/portraits/men/45.jpg">
-
-<div class="content">
-
-<h3>Dr. Amit Sharma</h3>
-
-<div class="subject">Physics Faculty</div>
-
-<p><strong>Qualification:</strong> Ph.D Physics</p>
-
-<p><strong>Experience:</strong> 15 Years</p>
-
-<p>Expert in IIT-JEE Advanced & Olympiad Preparation.</p>
-
-<div class="social">
-
-<a href="#"><i class="fab fa-facebook-f"></i></a>
-
-<a href="#"><i class="fab fa-linkedin-in"></i></a>
-
-<a href="#"><i class="fab fa-instagram"></i></a>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="https://randomuser.me/api/portraits/women/68.jpg">
-
-<div class="content">
-
-<h3>Dr. Neha Verma</h3>
-
-<div class="subject">Chemistry Faculty</div>
-
-<p><strong>Qualification:</strong> M.Sc, Ph.D</p>
-
-<p><strong>Experience:</strong> 12 Years</p>
-
-<p>Specialist in Organic & Inorganic Chemistry.</p>
-
-<div class="social">
-
-<a href="#"><i class="fab fa-facebook-f"></i></a>
-
-<a href="#"><i class="fab fa-linkedin-in"></i></a>
-
-<a href="#"><i class="fab fa-instagram"></i></a>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="https://randomuser.me/api/portraits/men/60.jpg">
-
-<div class="content">
-
-<h3>Prof. Raj Singh</h3>
-
-<div class="subject">Mathematics Faculty</div>
-
-<p><strong>Qualification:</strong> M.Tech</p>
-
-<p><strong>Experience:</strong> 18 Years</p>
-
-<p>Known for shortcut tricks and conceptual teaching.</p>
-
-<div class="social">
-
-<a href="#"><i class="fab fa-facebook-f"></i></a>
-
-<a href="#"><i class="fab fa-linkedin-in"></i></a>
-
-<a href="#"><i class="fab fa-instagram"></i></a>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<footer>
-
-<h2>Bright Future Coaching Institute</h2>
-
-<p>Your Success Is Our Mission</p>
-
-</footer>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h2>Bright <span>Future</span></h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="faculty.html">Faculty</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="results.html">Results</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html" class="register-btn">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <span class="badge"><i class="fa-solid fa-chalkboard-user"></i> Experienced Mentors</span>
+        <h1>Meet Our <span>Expert Faculty</span></h1>
+        <p>Learn from India's most experienced teachers, subject matter experts, and dedicated mentors.</p>
+    </section>
+
+    <!-- Faculty Grid Section -->
+    <section class="container">
+        <div class="section-title">
+            <h2>Our Teaching Stars</h2>
+            <p>Guiding students toward academic excellence with proven pedagogy</p>
+        </div>
+
+        <div class="grid">
+
+            <!-- Faculty 1 -->
+            <div class="card">
+                <div class="img-container">
+                    <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Dr. Amit Sharma">
+                </div>
+                <div class="content">
+                    <h3>Dr. Amit Sharma</h3>
+                    <div class="subject">Senior Physics Faculty</div>
+                    <div class="details">
+                        <p><strong>Qualification:</strong> Ph.D in Physics</p>
+                        <p><strong>Experience:</strong> 15+ Years</p>
+                    </div>
+                    <p class="desc">Expert in IIT-JEE Advanced concepts, problem-solving strategies & Physics Olympiad guidance.</p>
+                    <div class="social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Faculty 2 -->
+            <div class="card">
+                <div class="img-container">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Dr. Neha Verma">
+                </div>
+                <div class="content">
+                    <h3>Dr. Neha Verma</h3>
+                    <div class="subject">Chemistry Lead</div>
+                    <div class="details">
+                        <p><strong>Qualification:</strong> M.Sc, Ph.D Chemistry</p>
+                        <p><strong>Experience:</strong> 12+ Years</p>
+                    </div>
+                    <p class="desc">Specialist in Organic & Inorganic Chemistry with simplified memory tricks for NEET & JEE.</p>
+                    <div class="social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Faculty 3 -->
+            <div class="card">
+                <div class="img-container">
+                    <img src="https://randomuser.me/api/portraits/men/60.jpg" alt="Prof. Raj Singh">
+                </div>
+                <div class="content">
+                    <h3>Prof. Raj Singh</h3>
+                    <div class="subject">Mathematics Head</div>
+                    <div class="details">
+                        <p><strong>Qualification:</strong> M.Tech (IIT Kanpur)</p>
+                        <p><strong>Experience:</strong> 18+ Years</p>
+                    </div>
+                    <p class="desc">Renowned for speed mathematics, shortcut techniques, and building strong conceptual fundamentals.</p>
+                    <div class="social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div>
+            <h2>Bright Future</h2>
+            <p>Your Success is Our Mission. Empowering Students | Building Careers | Creating Success.</p>
+        </div>
+        <div>
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="courses.html">Our Courses</a></li>
+                <li><a href="faculty.html">Expert Faculty</a></li>
+                <li><a href="results.html">Top Results</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Contact Us</h3>
+            <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+            <p><i class="fa-solid fa-envelope"></i> info@brightfuture.com</p>
+            <p><i class="fa-solid fa-location-dot"></i> Lucknow, Uttar Pradesh, India</p>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bright Future Coaching Institute. All Rights Reserved.</p>
+        </div>
+    </footer>
 
 </body>
 </html>

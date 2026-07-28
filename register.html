@@ -1,461 +1,447 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Register | Bright Future Coaching</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-body{
-
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
-
-background:
-linear-gradient(rgba(13,110,253,.75),rgba(13,110,253,.75)),
-url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600");
-
-background-size:cover;
-background-position:center;
-padding:30px;
-}
-
-.container{
-
-width:1100px;
-max-width:100%;
-
-display:grid;
-grid-template-columns:1fr 1fr;
-
-background:rgba(255,255,255,.15);
-backdrop-filter:blur(15px);
-
-border-radius:25px;
-
-overflow:hidden;
-
-box-shadow:0 20px 50px rgba(0,0,0,.25);
-
-}
-
-/* LEFT */
-
-.left{
-
-background:linear-gradient(135deg,#0d6efd,#4b8dff);
-
-color:white;
-
-padding:60px 40px;
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-align-items:center;
-
-text-align:center;
-
-}
-
-.left h1{
-
-font-size:42px;
-
-margin-bottom:20px;
-
-}
-
-.left p{
-
-line-height:30px;
-
-margin-bottom:30px;
-
-}
-
-.left img{
-
-width:300px;
-
-max-width:100%;
-
-border-radius:20px;
-
-box-shadow:0 15px 35px rgba(0,0,0,.25);
-
-}
-
-/* RIGHT */
-
-.right{
-
-background:white;
-
-padding:45px;
-
-}
-
-.right h2{
-
-text-align:center;
-
-color:#0d6efd;
-
-margin-bottom:30px;
-
-font-size:34px;
-
-}
-
-.form-group{
-
-margin-bottom:18px;
-
-position:relative;
-
-}
-
-.form-group i{
-
-position:absolute;
-
-left:15px;
-
-top:17px;
-
-color:#0d6efd;
-
-}
-
-.form-group input,
-.form-group select{
-
-width:100%;
-
-padding:15px 15px 15px 45px;
-
-border:2px solid #ddd;
-
-border-radius:40px;
-
-outline:none;
-
-font-size:15px;
-
-transition:.3s;
-
-}
-
-.form-group input:focus,
-.form-group select:focus{
-
-border-color:#0d6efd;
-
-}
-
-.row{
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:15px;
-
-}
-
-.gender{
-
-margin:20px 0;
-
-}
-
-.gender label{
-
-margin-right:20px;
-
-font-size:15px;
-
-}
-
-.checkbox{
-
-margin:20px 0;
-
-font-size:14px;
-
-}
-
-.checkbox input{
-
-margin-right:8px;
-
-}
-
-button{
-
-width:100%;
-
-padding:15px;
-
-background:#0d6efd;
-
-color:white;
-
-border:none;
-
-border-radius:40px;
-
-font-size:17px;
-
-cursor:pointer;
-
-transition:.3s;
-
-}
-
-button:hover{
-
-background:#ff6b00;
-
-}
-
-.login{
-
-text-align:center;
-
-margin-top:20px;
-
-}
-
-.login a{
-
-text-decoration:none;
-
-color:#0d6efd;
-
-font-weight:600;
-
-}
-
-@media(max-width:900px){
-
-.container{
-
-grid-template-columns:1fr;
-
-}
-
-.left{
-
-display:none;
-
-}
-
-.row{
-
-grid-template-columns:1fr;
-
-}
-
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Bright Future Coaching Institute</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <style>
+        /* Modern Premium Palette & CSS Variables */
+        :root {
+            --bg-dark: #070B19;
+            --bg-card: #0F172A;
+            --navy-primary: #0A1128;
+            --gold-accent: #D4AF37;
+            --gold-hover: #F3E5AB;
+            --text-light: #F8FAFC;
+            --text-muted: #94A3B8;
+            --glass-bg: rgba(15, 23, 42, 0.85);
+            --glass-border: rgba(212, 175, 55, 0.25);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--bg-dark);
+            background-image: radial-gradient(circle at top right, rgba(212, 175, 55, 0.12), transparent 50%),
+                              radial-gradient(circle at bottom left, rgba(10, 17, 40, 0.8), transparent 50%);
+            color: var(--text-light);
+            padding: 30px 20px;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .brand-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Container Card */
+        .container {
+            width: 1050px;
+            max-width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Left Side */
+        .left {
+            background: linear-gradient(135deg, rgba(10, 17, 40, 0.95), rgba(15, 23, 42, 0.9)), 
+                        url("https://images.unsplash.com/photo-1513258496099-48168024aec0?w=1000");
+            background-size: cover;
+            background-position: center;
+            padding: 50px 40px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-right: 1px solid var(--glass-border);
+            position: relative;
+        }
+
+        .home-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: var(--transition);
+        }
+
+        .home-btn:hover {
+            color: var(--gold-accent);
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.15);
+            border: 1px solid var(--gold-accent);
+            color: var(--gold-accent);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .left h1 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .left h1 span {
+            color: var(--gold-accent);
+            font-style: italic;
+        }
+
+        .left p {
+            line-height: 1.7;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .left img {
+            width: 100%;
+            max-width: 280px;
+            border-radius: 16px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Right Form Side */
+        .right {
+            padding: 45px 40px;
+            background: var(--bg-card);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .right-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .right-header h2 {
+            font-size: 2.2rem;
+            color: #fff;
+        }
+
+        .right-header p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin-top: 5px;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+            position: relative;
+        }
+
+        .form-group i {
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gold-accent);
+            font-size: 0.95rem;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 13px 18px 13px 48px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            outline: none;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            transition: var(--transition);
+            appearance: none;
+        }
+
+        .form-group select {
+            color: var(--text-light);
+            cursor: pointer;
+        }
+
+        .form-group select option {
+            background: var(--bg-card);
+            color: var(--text-light);
+            padding: 10px;
+        }
+
+        .form-group input::placeholder {
+            color: #64748B;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: var(--gold-accent);
+            background: rgba(212, 175, 55, 0.05);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.1);
+        }
+
+        /* Gender Section */
+        .gender {
+            margin: 15px 0;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .gender strong {
+            color: #fff;
+        }
+
+        .gender label {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            color: var(--text-light);
+        }
+
+        .gender input[type="radio"] {
+            accent-color: var(--gold-accent);
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+        }
+
+        /* Checkbox */
+        .checkbox {
+            margin: 15px 0 22px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .checkbox label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+
+        .checkbox input[type="checkbox"] {
+            accent-color: var(--gold-accent);
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+        }
+
+        /* Submit Button */
+        button {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, var(--gold-accent), #B38728);
+            color: #000;
+            border: none;
+            border-radius: 12px;
+            font-size: 0.98rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+        }
+
+        .login {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+
+        .login a {
+            text-decoration: none;
+            color: var(--gold-accent);
+            font-weight: 600;
+            margin-left: 5px;
+            transition: var(--transition);
+        }
+
+        .login a:hover {
+            color: var(--gold-hover);
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .left {
+                display: none;
+            }
+
+            .row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .right {
+                padding: 40px 25px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="container">
-
-<div class="left">
-
-<h1>Join Bright Future</h1>
-
-<p>
-
-Register today and start your preparation with India's best coaching institute.
-
-Learn from expert faculty and achieve your dream career.
-
-</p>
-
-<img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?w=700">
-
-</div>
-
-<div class="right">
-
-<h2>Create Account</h2>
-
-<form>
-
-<div class="row">
-
-<div class="form-group">
-
-<i class="fas fa-user"></i>
-
-<input type="text" placeholder="First Name" required>
-
-</div>
-
-<div class="form-group">
-
-<i class="fas fa-user"></i>
-
-<input type="text" placeholder="Last Name" required>
-
-</div>
-
-</div>
-
-<div class="form-group">
-
-<i class="fas fa-envelope"></i>
-
-<input type="email" placeholder="Email Address" required>
-
-</div>
-
-<div class="form-group">
-
-<i class="fas fa-phone"></i>
-
-<input type="tel" placeholder="Mobile Number" required>
-
-</div>
-
-<div class="form-group">
-
-<i class="fas fa-graduation-cap"></i>
-
-<select required>
-
-<option>Select Course</option>
-
-<option>IIT-JEE</option>
-
-<option>NEET</option>
-
-<option>SSC</option>
-
-<option>Banking</option>
-
-<option>CUET</option>
-
-<option>NDA</option>
-
-</select>
-
-</div>
-
-<div class="row">
-
-<div class="form-group">
-
-<i class="fas fa-lock"></i>
-
-<input type="password" placeholder="Password" required>
-
-</div>
-
-<div class="form-group">
-
-<i class="fas fa-lock"></i>
-
-<input type="password" placeholder="Confirm Password" required>
-
-</div>
-
-</div>
-
-<div class="gender">
-
-<strong>Gender :</strong>
-
-<label>
-
-<input type="radio" name="gender">
-
- Male
-
-</label>
-
-<label>
-
-<input type="radio" name="gender">
-
- Female
-
-</label>
-
-<label>
-
-<input type="radio" name="gender">
-
- Other
-
-</label>
-
-</div>
-
-<div class="checkbox">
-
-<label>
-
-<input type="checkbox" required>
-
-I agree to the Terms & Conditions
-
-</label>
-
-</div>
-
-<button type="submit">
-
-Register Now
-
-</button>
-
-<div class="login">
-
-Already have an account?
-
-<a href="login.html">
-
-Login Here
-
-</a>
-
-</div>
-
-</form>
-
-</div>
-
-</div>
+    <div class="container">
+
+        <!-- Left Showcase Side -->
+        <div class="left">
+            <a href="index.html" class="home-btn"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+            <span class="badge"><i class="fa-solid fa-user-plus"></i> Student Registration</span>
+            <h1>Join <span>Bright Future</span></h1>
+            <p>Register today and begin your journey toward academic success with India's premier coaching institute.</p>
+            <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?w=700" alt="Learning Experience">
+        </div>
+
+        <!-- Right Form Side -->
+        <div class="right">
+
+            <div class="right-header">
+                <h2>Create Account</h2>
+                <p>Fill in your details to register for courses</p>
+            </div>
+
+            <form>
+
+                <div class="row">
+                    <div class="form-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="First Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Last Name" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+
+                <div class="form-group">
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" placeholder="Mobile Number" required>
+                </div>
+
+                <div class="form-group">
+                    <i class="fas fa-graduation-cap"></i>
+                    <select required>
+                        <option value="" disabled selected>Select Desired Course</option>
+                        <option value="IIT-JEE">IIT-JEE (Main & Advanced)</option>
+                        <option value="NEET">NEET Medical Entrance</option>
+                        <option value="SSC">SSC (CGL, CHSL, MTS)</option>
+                        <option value="Banking">Banking (IBPS, SBI PO)</option>
+                        <option value="CUET">CUET Entrance Test</option>
+                        <option value="NDA">NDA Defense Academy</option>
+                    </select>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Password" required>
+                    </div>
+
+                    <div class="form-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Confirm Password" required>
+                    </div>
+                </div>
+
+                <div class="gender">
+                    <strong>Gender:</strong>
+                    <label>
+                        <input type="radio" name="gender" required> Male
+                    </label>
+                    <label>
+                        <input type="radio" name="gender"> Female
+                    </label>
+                    <label>
+                        <input type="radio" name="gender"> Other
+                    </label>
+                </div>
+
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" required>
+                        I agree to the Terms & Conditions
+                    </label>
+                </div>
+
+                <button type="submit">
+                    Register Now <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <div class="login">
+                    Already have an account?
+                    <a href="login.html">Login Here</a>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
 
 </body>
 </html>
