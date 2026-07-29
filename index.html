@@ -3,151 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bright Future Coaching Institute | Shaping Excellence</title>
+    <title>Bright Future Coaching Institute | India's Trusted Learning Platform</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
     <style>
-        /* Modern Premium Palette & CSS Variables */
+        /* Natural Botanical & Herb Theme Variables */
         :root {
-            --bg-dark: #070B19;
-            --bg-card: #0F172A;
-            --navy-primary: #0A1128;
-            --gold-accent: #D4AF37;
-            --gold-hover: #F3E5AB;
-            --text-light: #F8FAFC;
-            --text-muted: #94A3B8;
-            --glass-bg: rgba(15, 23, 42, 0.75);
-            --glass-border: rgba(212, 175, 55, 0.2);
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --bg-cream: #FAF9F5;
+            --card-bg: #FFFFFF;
+            --text-main: #292524;
+            --text-gray: #57534E;
+            --accent-gold: #C28E38;
+            --accent-terracotta: #4D7C0F;
+            --gradient: linear-gradient(135deg, #4D7C0F 0%, #365314 100%);
+            --border-color: rgba(41, 37, 36, 0.1);
+            --transition: all 0.3s ease;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Montserrat', sans-serif;
         }
 
         body {
-            background-color: var(--bg-dark);
-            color: var(--text-light);
+            background-color: var(--bg-cream);
+            color: var(--text-main);
             line-height: 1.6;
             overflow-x: hidden;
         }
 
-        h1, h2, h3, .brand-font {
-            font-family: 'Playfair Display', serif;
+        /* Top Announcement Bar */
+        .top-bar {
+            background: var(--gradient);
+            color: #FFFFFF;
+            text-align: center;
+            padding: 8px 15px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
         }
 
-        /* Fixed Premium Header */
+        /* Fixed Header */
         header {
-            position: fixed;
+            position: sticky;
             top: 0;
             left: 0;
             width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 18px 8%;
-            background: var(--glass-bg);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--glass-border);
+            padding: 16px 6%;
+            background: rgba(250, 249, 245, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
             z-index: 1000;
         }
 
         .logo h2 {
             font-size: 1.8rem;
-            color: #fff;
-            font-weight: 700;
+            color: var(--text-main);
+            font-weight: 800;
         }
 
         .logo h2 span {
-            color: var(--gold-accent);
+            color: var(--accent-terracotta);
         }
 
         nav ul {
             display: flex;
             list-style: none;
             align-items: center;
-            gap: 24px;
+            gap: 22px;
         }
 
         nav ul li a {
-            color: var(--text-light);
+            color: var(--text-main);
             text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 500;
+            font-size: 0.9rem;
+            font-weight: 600;
             transition: var(--transition);
         }
 
         nav ul li a:hover {
-            color: var(--gold-accent);
+            color: var(--accent-terracotta);
         }
 
-        nav ul li a.register-btn {
-            background: linear-gradient(135deg, var(--gold-accent), #B38728);
-            color: #000;
+        .nav-btn {
+            background: var(--gradient);
+            color: #FFFFFF !important;
             padding: 10px 22px;
-            border-radius: 30px;
-            font-weight: 600;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            border-radius: 8px;
+            font-weight: 700 !important;
+            box-shadow: 0 4px 15px rgba(77, 124, 15, 0.2);
         }
 
-        nav ul li a.register-btn:hover {
+        .nav-btn:hover {
+            opacity: 0.9;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
-            color: #000;
         }
 
-        /* Hero Section */
+        /* Hero Section with Background Slider */
         .hero {
-            min-height: 100vh;
+            position: relative;
+            min-height: 85vh;
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            padding: 140px 8% 60px;
-            background: radial-gradient(circle at top right, rgba(212, 175, 55, 0.08), transparent 50%);
+            padding: 60px 6%;
+            overflow: hidden;
+        }
+
+        .hero-slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            animation: slideAnimation 9s infinite;
+        }
+
+        .hero-slide:nth-child(1) {
+            background-image: linear-gradient(rgba(250, 249, 245, 0.35), rgba(250, 249, 245, 0.35)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1400');
+            animation-delay: 0s;
+        }
+
+        .hero-slide:nth-child(2) {
+            background-image: linear-gradient(rgba(250, 249, 245, 0.35), rgba(250, 249, 245, 0.35)), url('https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1400');
+            animation-delay: 3s;
+        }
+
+        .hero-slide:nth-child(3) {
+            background-image: linear-gradient(rgba(250, 249, 245, 0.35), rgba(250, 249, 245, 0.35)), url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1400');
+            animation-delay: 6s;
+        }
+
+        @keyframes slideAnimation {
+            0% { opacity: 0; transform: scale(1.05); }
+            12% { opacity: 1; transform: scale(1); }
+            33% { opacity: 1; transform: scale(1); }
+            45% { opacity: 0; transform: scale(1.02); }
+            100% { opacity: 0; }
         }
 
         .hero-content {
-            max-width: 600px;
+            position: relative;
+            z-index: 2;
+            max-width: 650px;
         }
 
         .badge {
-            display: inline-block;
-            background: rgba(212, 175, 55, 0.15);
-            border: 1px solid var(--gold-accent);
-            color: var(--gold-accent);
-            padding: 6px 16px;
-            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(250, 249, 245, 0.9);
+            border: 1px solid var(--accent-terracotta);
+            color: var(--accent-terracotta);
+            padding: 6px 14px;
+            border-radius: 6px;
             font-size: 0.85rem;
             font-weight: 600;
             margin-bottom: 20px;
         }
 
         .hero-content h1 {
-            font-size: 3.5rem;
+            font-size: 3.2rem;
             line-height: 1.2;
+            font-weight: 800;
             margin-bottom: 20px;
-            color: #FFF;
+            color: var(--text-main);
+            text-shadow: 0 2px 10px rgba(250, 249, 245, 0.8);
         }
 
         .hero-content h1 span {
-            color: var(--gold-accent);
-            font-style: italic;
+            color: var(--accent-terracotta);
         }
 
         .hero-content p {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            margin-bottom: 35px;
+            font-size: 1.05rem;
+            color: var(--text-main);
+            font-weight: 500;
+            margin-bottom: 30px;
+            text-shadow: 0 1px 8px rgba(250, 249, 245, 0.8);
         }
 
         .hero-btns {
@@ -156,86 +212,72 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--gold-accent), #B38728);
-            color: #000;
-            padding: 14px 32px;
-            border-radius: 30px;
-            font-weight: 600;
+            background: var(--gradient);
+            color: #FFFFFF;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 700;
             text-decoration: none;
             transition: var(--transition);
         }
 
         .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(77, 124, 15, 0.3);
         }
 
         .btn-secondary {
-            border: 1px solid var(--glass-border);
-            background: rgba(255, 255, 255, 0.05);
-            color: #fff;
-            padding: 14px 32px;
-            border-radius: 30px;
-            font-weight: 500;
+            border: 1px solid var(--border-color);
+            background: rgba(250, 249, 245, 0.9);
+            color: var(--text-main);
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
             text-decoration: none;
             transition: var(--transition);
         }
 
         .btn-secondary:hover {
-            border-color: var(--gold-accent);
-            background: rgba(212, 175, 55, 0.1);
+            border-color: var(--accent-terracotta);
+            background: rgba(77, 124, 15, 0.05);
         }
 
-        .hero-image {
-            position: relative;
-        }
-
-        .hero-image img {
-            width: 500px;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-            border: 1px solid var(--glass-border);
-        }
-
-        /* Stats Grid */
+        /* Stats Bar */
         .stats {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
-            padding: 40px 8%;
-            margin-top: -40px;
+            padding: 0 6%;
+            margin-top: -30px;
             position: relative;
             z-index: 10;
         }
 
         .stat-card {
-            background: var(--bg-card);
-            border: 1px solid var(--glass-border);
-            padding: 30px;
-            border-radius: 16px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 25px;
+            border-radius: 12px;
             text-align: center;
-            transition: var(--transition);
-        }
-
-        .stat-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--gold-accent);
+            box-shadow: 0 10px 30px rgba(41, 37, 36, 0.05);
         }
 
         .stat-card h2 {
-            font-size: 2.5rem;
-            color: var(--gold-accent);
+            font-size: 2.3rem;
+            color: var(--accent-terracotta);
+            font-weight: 800;
             margin-bottom: 5px;
         }
 
         .stat-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            font-weight: 500;
         }
 
-        /* Sections Common */
+        /* Common Sections */
         section {
-            padding: 80px 8%;
+            padding: 80px 6%;
         }
 
         .section-title {
@@ -244,187 +286,326 @@
         }
 
         .section-title h2 {
-            font-size: 2.5rem;
-            color: #fff;
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: var(--text-main);
         }
 
         .section-title p {
-            color: var(--text-muted);
+            color: var(--text-gray);
             margin-top: 8px;
+            font-size: 0.95rem;
         }
 
-        /* Courses */
-        .course-container {
+        /* Why Choose Us / Features Grid */
+        .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
         }
 
-        .course-card {
-            background: var(--bg-card);
-            border-radius: 16px;
-            overflow: hidden;
-            border: 1px solid var(--glass-border);
-            transition: var(--transition);
-        }
-
-        .course-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--gold-accent);
-        }
-
-        .course-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .course-card-body {
-            padding: 25px;
-        }
-
-        .course-card-body h3 {
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-        }
-
-        .course-card-body p {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            margin-bottom: 20px;
-        }
-
-        .course-card-body a {
-            color: var(--gold-accent);
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .course-card-body a:hover {
-            gap: 12px;
-        }
-
-        /* Toppers */
-        .topper-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        .student-card {
-            background: var(--bg-card);
-            border: 1px solid var(--glass-border);
-            padding: 30px;
-            border-radius: 16px;
+        .feature-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 30px 20px;
+            border-radius: 12px;
             text-align: center;
             transition: var(--transition);
         }
 
-        .student-card:hover {
-            border-color: var(--gold-accent);
+        .feature-box:hover {
+            border-color: var(--accent-terracotta);
+            transform: translateY(-5px);
+        }
+
+        .feature-box i {
+            font-size: 2.5rem;
+            color: var(--accent-terracotta);
+            margin-bottom: 15px;
+        }
+
+        .feature-box h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .feature-box p {
+            color: var(--text-gray);
+            font-size: 0.88rem;
+        }
+
+        /* Courses / Batches Style */
+        .course-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .course-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 20px rgba(41, 37, 36, 0.04);
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-terracotta);
+            box-shadow: 0 10px 30px rgba(41, 37, 36, 0.08);
+        }
+
+        .course-card img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+        }
+
+        .course-card-body {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .course-card-body h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .course-card-body p {
+            color: var(--text-gray);
+            font-size: 0.88rem;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .course-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border-color);
+            padding-top: 15px;
+        }
+
+        .price {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--accent-gold);
+        }
+
+        .explore-link {
+            color: var(--accent-terracotta);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Student Performance Graph Section */
+        .progress-section {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            margin: 0 6%;
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 40px;
+            align-items: center;
+            box-shadow: 0 10px 30px rgba(41, 37, 36, 0.04);
+        }
+
+        .progress-content h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+
+        .progress-content h2 span {
+            color: var(--accent-terracotta);
+        }
+
+        .progress-content p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .progress-stats-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .progress-stats-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-main);
+        }
+
+        .progress-stats-list li i {
+            color: var(--accent-terracotta);
+        }
+
+        .graph-box {
+            background: var(--bg-cream);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .graph-box h4 {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+
+        .graph-svg {
+            width: 100%;
+            height: 180px;
+        }
+
+        /* Toppers Section */
+        .topper-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .student-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(41, 37, 36, 0.04);
         }
 
         .student-card img {
-            width: 100px;
-            height: 100px;
+            width: 90px;
+            height: 90px;
             border-radius: 50%;
-            border: 3px solid var(--gold-accent);
+            border: 2px solid var(--accent-terracotta);
             margin-bottom: 15px;
             object-fit: cover;
         }
 
         .student-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 5px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: var(--text-main);
         }
 
         .student-card p {
-            color: var(--gold-accent);
+            color: var(--accent-terracotta);
             font-weight: 600;
+            font-size: 0.9rem;
         }
 
-        /* Reviews */
+        /* Reviews Section */
         .reviews-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            gap: 25px;
         }
 
         .review-box {
-            background: var(--bg-card);
-            border: 1px solid var(--glass-border);
-            padding: 30px;
-            border-radius: 16px;
-            position: relative;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(41, 37, 36, 0.04);
         }
 
         .stars {
-            color: var(--gold-accent);
-            margin-bottom: 15px;
+            color: var(--accent-gold);
+            margin-bottom: 12px;
+            font-size: 0.9rem;
         }
 
         .review-box p {
-            color: var(--text-muted);
-            font-style: italic;
+            color: var(--text-gray);
+            font-size: 0.9rem;
             margin-bottom: 15px;
         }
 
         .review-box h4 {
-            color: #fff;
+            color: var(--text-main);
+            font-size: 0.95rem;
+            font-weight: 700;
             text-align: right;
-            font-weight: 600;
         }
 
-        /* Admission Banner CTA */
+        /* Admission CTA Banner */
         .admission {
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(10, 17, 40, 0.9));
-            border: 1px solid var(--gold-accent);
-            border-radius: 20px;
-            margin: 40px 8% 80px;
+            background: linear-gradient(135deg, rgba(77, 124, 15, 0.08), rgba(255, 255, 255, 0.9));
+            border: 1px solid var(--accent-terracotta);
+            border-radius: 16px;
+            margin: 40px 6%;
             text-align: center;
-            padding: 60px 20px;
+            padding: 50px 20px;
+            box-shadow: 0 10px 30px rgba(41, 37, 36, 0.04);
         }
 
         .admission h2 {
-            font-size: 2.8rem;
-            margin-bottom: 15px;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: var(--text-main);
         }
 
         .admission p {
-            color: var(--text-muted);
-            margin-bottom: 30px;
+            color: var(--text-gray);
+            margin-bottom: 25px;
         }
 
-        /* Footer */
+        /* Enhanced Footer Styles */
         footer {
-            background: var(--navy-primary);
-            border-top: 1px solid var(--glass-border);
-            padding: 60px 8% 30px;
+            background: #EFECE6;
+            border-top: 1px solid var(--border-color);
+            padding: 50px 6% 25px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
         }
 
         footer h2 {
-            color: var(--gold-accent);
-            margin-bottom: 15px;
+            color: var(--accent-terracotta);
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 12px;
         }
 
         footer h3 {
-            color: #fff;
-            margin-bottom: 20px;
-            font-size: 1.2rem;
+            color: var(--text-main);
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+            font-weight: 700;
         }
 
         footer p, footer ul li a {
-            color: var(--text-muted);
+            color: var(--text-gray);
             text-decoration: none;
-            font-size: 0.9rem;
-            margin-bottom: 10px;
+            font-size: 0.88rem;
+            margin-bottom: 8px;
             display: block;
+            transition: var(--transition);
         }
 
         footer ul {
@@ -432,42 +613,94 @@
         }
 
         footer ul li a:hover {
-            color: var(--gold-accent);
+            color: var(--accent-terracotta);
+            padding-left: 4px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 36px;
+            height: 36px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            border-radius: 50%;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .social-icons a:hover {
+            background: var(--accent-terracotta);
+            color: #FFFFFF;
+            border-color: var(--accent-terracotta);
+            transform: translateY(-2px);
         }
 
         .footer-bottom {
             grid-column: 1 / -1;
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            color: var(--text-muted);
-            font-size: 0.85rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 25px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-gray);
+            font-size: 0.8rem;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
-        /* Responsive Design */
+        .footer-legal-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-legal-links a {
+            color: var(--text-gray);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-legal-links a:hover {
+            color: var(--accent-terracotta);
+        }
+
+        /* Responsive */
         @media (max-width: 992px) {
             .hero {
-                flex-direction: column;
                 text-align: center;
-                padding-top: 120px;
+                padding-top: 40px;
+                justify-content: center;
             }
-
-            .hero-content {
-                margin-bottom: 40px;
-            }
-
             .hero-btns {
                 justify-content: center;
             }
-
-            .hero-image img {
-                width: 100%;
-                max-width: 450px;
+            nav ul {
+                display: none;
+            }
+            .progress-section {
+                grid-template-columns: 1fr;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
             }
         }
     </style>
 </head>
 <body>
+
+    <!-- Top Announcement Bar -->
+    <div class="top-bar">
+        🚀 Admissions Open for 2026-27 Batches! Get Up to 50% Scholarship on Early Enrollment.
+    </div>
 
     <!-- Header Section -->
     <header>
@@ -478,92 +711,177 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="courses.html">Courses</a></li>
+                <li><a href="courses.html">Batches</a></li>
                 <li><a href="faculty.html">Faculty</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="results.html">Results</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="register.html" class="register-btn">Register</a></li>
+                <li><a href="register.html" class="nav-btn">Get Started</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Background Slider -->
     <section class="hero">
-        <div class="hero-content">
-            <span class="badge"><i class="fa-solid fa-award"></i> Premier Coaching Institute</span>
-            <h1>Unlock Your <span>Dream Career</span></h1>
-            <p>India's Leading Coaching Institute for IIT-JEE, NEET, CUET, SSC, Banking & Foundation Programs.</p>
-            <div class="hero-btns">
-                <a href="register.html" class="btn-primary">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
-                <a href="courses.html" class="btn-secondary">Explore Courses</a>
-            </div>
+        <div class="hero-slider">
+            <div class="hero-slide"></div>
+            <div class="hero-slide"></div>
+            <div class="hero-slide"></div>
         </div>
-        <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=700" alt="Students Studying">
+        <div class="hero-content">
+            <span class="badge"><i class="fa-solid fa-fire"></i> India's Most Trusted Education Platform</span>
+            <h1>Padhai Ab Hogi <span>Aasan & Affordable</span></h1>
+            <p>Join India's top educators for IIT-JEE, NEET, CUET, and Foundation courses with structured study material and daily live classes.</p>
+            <div class="hero-btns">
+                <a href="register.html" class="btn-primary">Explore Batches</a>
+                <a href="courses.html" class="btn-secondary">Free Classes</a>
+            </div>
         </div>
     </section>
 
     <!-- Stats Section -->
     <div class="stats">
         <div class="stat-card">
-            <h2>15,000+</h2>
-            <p>Enrolled Students</p>
+            <h2>15K+</h2>
+            <p>Active Students</p>
         </div>
         <div class="stat-card">
             <h2>250+</h2>
-            <p>Expert Faculty</p>
+            <p>Expert Teachers</p>
         </div>
         <div class="stat-card">
             <h2>98%</h2>
-            <p>Success Rate</p>
+            <p>Selection Rate</p>
         </div>
         <div class="stat-card">
-            <h2>4.9 <i class="fa-solid fa-star" style="font-size: 1.5rem;"></i></h2>
-            <p>Google Rating</p>
+            <h2>4.9 ⭐</h2>
+            <p>App Rating</p>
         </div>
     </div>
+
+    <!-- Why Choose Us / Features -->
+    <section class="features">
+        <div class="section-title">
+            <h2>Why Choose Bright Future?</h2>
+            <p>We provide everything you need to score top ranks in competitive exams</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-box">
+                <i class="fa-solid fa-chalkboard-user"></i>
+                <h3>Top Educators</h3>
+                <p>Learn directly from India's finest mentors with years of coaching experience.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fa-solid fa-brain"></i>
+                <h3>Doubt Resolution</h3>
+                <p>Get instant 24/7 one-on-one doubt solving support through our expert panel.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fa-solid fa-file-lines"></i>
+                <h3>Smart DPP & Notes</h3>
+                <p>Curated chapter-wise practice papers, formula sheets, and short notes.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>All India Test Series</h3>
+                <p>Analyze your real-time ranking and performance metrics across India.</p>
+            </div>
+        </div>
+    </section>
 
     <!-- Courses Section -->
     <section class="courses">
         <div class="section-title">
-            <h2>Popular Programs</h2>
-            <p>Designed by top educators to help you crack competitive exams</p>
+            <h2>Featured Batches</h2>
+            <p>Power-packed courses designed to guarantee top ranks</p>
         </div>
         <div class="course-container">
             <div class="course-card">
                 <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600" alt="IIT JEE">
                 <div class="course-card-body">
-                    <h3>IIT JEE (Main & Adv)</h3>
-                    <p>Comprehensive preparation with top-tier faculty and smart digital classrooms.</p>
-                    <a href="courses.html">Read Details <i class="fa-solid fa-arrow-right"></i></a>
+                    <h3>Arjuna JEE 2026</h3>
+                    <p>Complete Class 11th + JEE Main & Advanced comprehensive preparation with daily practice papers.</p>
+                    <div class="course-footer">
+                        <span class="price">₹4,500</span>
+                        <a href="courses.html" class="explore-link">Study Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="course-card">
                 <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600" alt="NEET">
                 <div class="course-card-body">
-                    <h3>NEET Medical</h3>
-                    <p>Specialized medical entrance training with regular mock tests & personal mentoring.</p>
-                    <a href="courses.html">Read Details <i class="fa-solid fa-arrow-right"></i></a>
+                    <h3>Yakeen NEET 2026</h3>
+                    <p>Dedicated dropper batch for NEET medical entrance with regular test series & mentorship.</p>
+                    <div class="course-footer">
+                        <span class="price">₹4,200</span>
+                        <a href="courses.html" class="explore-link">Study Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="course-card">
                 <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?w=600" alt="SSC">
                 <div class="course-card-body">
-                    <h3>SSC & Banking</h3>
-                    <p>Complete targeted preparation for all Government & Public sector exams.</p>
-                    <a href="courses.html">Read Details <i class="fa-solid fa-arrow-right"></i></a>
+                    <h3>Lakshya SSC CGL</h3>
+                    <p>Targeted preparation for all government exams including Banking, Railways, and SSC.</p>
+                    <div class="course-footer">
+                        <span class="price">₹2,999</span>
+                        <a href="courses.html" class="explore-link">Study Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Student Performance Graph Section -->
+    <div class="progress-section">
+        <div class="progress-content">
+            <h2>Track Real-Time <span>Student Growth</span></h2>
+            <p>Our systematic testing and data analytics dashboard allow students and parents to view accurate performance curves, identify weak spots, and improve weekly test scores.</p>
+            <ul class="progress-stats-list">
+                <li><i class="fa-solid fa-circle-check"></i> Weekly Mock Tests & Detailed Analysis</li>
+                <li><i class="fa-solid fa-circle-check"></i> Accuracy Rate & Speed Tracking</li>
+                <li><i class="fa-solid fa-circle-check"></i> AIR (All India Rank) Predictor Tool</li>
+            </ul>
+        </div>
+        <div class="graph-box">
+            <h4>Average Student Score Progression (%)</h4>
+            <svg class="graph-svg" viewBox="0 0 500 200">
+                <!-- Grid lines -->
+                <line x1="0" y1="40" x2="500" y2="40" stroke="rgba(41,37,36,0.1)" stroke-dasharray="4" />
+                <line x1="0" y1="100" x2="500" y2="100" stroke="rgba(41,37,36,0.1)" stroke-dasharray="4" />
+                <line x1="0" y1="160" x2="500" y2="160" stroke="rgba(41,37,36,0.1)" stroke-dasharray="4" />
+                
+                <!-- Area gradient -->
+                <defs>
+                    <linearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#4D7C0F" stop-opacity="0.3" />
+                        <stop offset="100%" stop-color="#4D7C0F" stop-opacity="0.0" />
+                    </linearGradient>
+                </defs>
+                <path d="M 30 150 Q 150 120, 230 80 T 450 30 L 450 180 L 30 180 Z" fill="url(#grad)" />
+                
+                <!-- Line Graph -->
+                <path d="M 30 150 Q 150 120, 230 80 T 450 30" fill="none" stroke="#4D7C0F" stroke-width="4" stroke-linecap="round" />
+                
+                <!-- Data Points -->
+                <circle cx="30" cy="150" r="6" fill="#4D7C0F" />
+                <circle cx="160" cy="110" r="6" fill="#4D7C0F" />
+                <circle cx="280" cy="70" r="6" fill="#4D7C0F" />
+                <circle cx="450" cy="30" r="6" fill="#4D7C0F" />
+
+                <!-- Labels -->
+                <text x="20" y="185" font-size="12" fill="#57534E">Test 1</text>
+                <text x="140" y="185" font-size="12" fill="#57534E">Test 5</text>
+                <text x="260" y="185" font-size="12" fill="#57534E">Test 10</text>
+                <text x="420" y="185" font-size="12" fill="#57534E">Finals</text>
+            </svg>
+        </div>
+    </div>
+
     <!-- Top Rankers Section -->
     <section class="toppers">
         <div class="section-title">
-            <h2>Our Top Rankers</h2>
-            <p>Celebrating excellence and outstanding achievements</p>
+            <h2>Our Hall of Fame</h2>
+            <p>Celebrating the incredible success of our students</p>
         </div>
         <div class="topper-container">
             <div class="student-card">
@@ -587,22 +905,22 @@
     <!-- Reviews Section -->
     <section class="reviews">
         <div class="section-title">
-            <h2>Student Testimonials</h2>
-            <p>Hear what our successful students say about us</p>
+            <h2>What Our Students Say</h2>
+            <p>Real stories of determination and success</p>
         </div>
         <div class="reviews-container">
             <div class="review-box">
                 <div class="stars">
                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                 </div>
-                <p>"Excellent coaching institute! The conceptual clarity and test series provided by teachers helped me qualify JEE Main with ease."</p>
+                <p>"The best teaching methodology! Doubt sessions and daily homework questions really helped me crack my exam."</p>
                 <h4>- Priya Sharma</h4>
             </div>
             <div class="review-box">
                 <div class="stars">
                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                 </div>
-                <p>"Best institute for competitive exams in Lucknow. Supportive faculties and personal doubt-solving sessions make all the difference."</p>
+                <p>"Affordable pricing and top-class educators. It feels just like studying in a high-end physical institute from home."</p>
                 <h4>- Aman Verma</h4>
             </div>
         </div>
@@ -610,35 +928,57 @@
 
     <!-- CTA Section -->
     <section class="admission">
-        <h2>Admissions Open 2026-27</h2>
-        <p>Take the first step towards a successful career with Bright Future Coaching Institute.</p>
-        <a href="register.html" class="btn-primary">Enroll Now</a>
+        <h2>Start Your Learning Journey Today</h2>
+        <p>Download the app or join our online/offline classes to secure your dream seat.</p>
+        <a href="register.html" class="btn-primary">Join Batch Now</a>
     </section>
 
-    <!-- Footer -->
+    <!-- Enhanced Footer -->
     <footer>
         <div>
             <h2>Bright Future</h2>
-            <p>Your Success is Our Mission. Providing quality education & guidance for competitive exams.</p>
+            <p>Empowering millions of students across India with quality education at an affordable price.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-telegram"></i></a>
+            </div>
         </div>
         <div>
             <h3>Quick Links</h3>
             <ul>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="courses.html">Our Courses</a></li>
-                <li><a href="faculty.html">Expert Faculty</a></li>
-                <li><a href="results.html">Top Results</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="courses.html">Batches</a></li>
+                <li><a href="faculty.html">Educators</a></li>
+                <li><a href="results.html">Results</a></li>
+                <li><a href="contact.html">Support</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Popular Exams</h3>
+            <ul>
+                <li><a href="courses.html">IIT-JEE Main & Advanced</a></li>
+                <li><a href="courses.html">NEET Medical Exam</a></li>
+                <li><a href="courses.html">CUET UG Entrance</a></li>
+                <li><a href="courses.html">SSC CGL & Banking</a></li>
+                <li><a href="courses.html">Foundation (Class 9-10)</a></li>
             </ul>
         </div>
         <div>
             <h3>Contact Us</h3>
             <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
-            <p><i class="fa-solid fa-envelope"></i> info@brightfuture.com</p>
+            <p><i class="fa-solid fa-envelope"></i> support@brightfuture.com</p>
             <p><i class="fa-solid fa-location-dot"></i> Lucknow, Uttar Pradesh, India</p>
         </div>
+        
         <div class="footer-bottom">
-            <p>&copy; 2026 Bright Future Coaching Institute. All Rights Reserved.</p>
+            <p>&copy; 2026 Bright Future Learning App. All Rights Reserved.</p>
+            <div class="footer-legal-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Refund Policy</a>
+            </div>
         </div>
     </footer>
 
