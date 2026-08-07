@@ -333,18 +333,18 @@
         }
 
         /* Footer */
-        footer {
-            background: #292524;
-            color: #F5F5F4;
-            border-top: 1px solid var(--border-color);
+      footer {
+            background: #23201E;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
             padding: 60px 8% 30px;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 40px;
+            color: #A8A29E;
         }
 
         footer h2 {
-            color: var(--accent-gold);
+            color: #FFFFFF;
             margin-bottom: 15px;
             font-size: 1.5rem;
         }
@@ -352,8 +352,7 @@
         footer h3 {
             color: #FFFFFF;
             margin-bottom: 20px;
-            font-size: 1.1rem;
-            font-weight: 600;
+            font-size: 1.15rem;
         }
 
         footer p, footer ul li a {
@@ -370,17 +369,84 @@
         }
 
         footer ul li a:hover {
+            color: var(--accent-gold);
+            padding-left: 4px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 38px;
+            height: 38px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             color: #FFFFFF;
-            transform: translateX(4px);
+            border-radius: 50%;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .social-icons a:hover {
+            background: var(--accent-terracotta);
+            color: #FFFFFF;
+            border-color: var(--accent-terracotta);
+            transform: translateY(-2px);
         }
 
         .footer-bottom {
             grid-column: 1 / -1;
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
             color: #A8A29E;
             font-size: 0.85rem;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .footer-legal-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-legal-links a {
+            color: #A8A29E;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-legal-links a:hover {
+            color: var(--accent-gold);
+        }
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero {
+                text-align: center;
+                padding-top: 40px;
+                justify-content: center;
+            }
+            .hero-btns {
+                justify-content: center;
+            }
+            nav ul {
+                display: none;
+            }
+            .progress-section {
+                grid-template-columns: 1fr;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
         }
 
         /* Responsive Design */
@@ -530,35 +596,117 @@
                 <h3>Aman Verma</h3>
                 <p><span>State Rank - 8</span></p>
             </div>
+
+            <div class="card">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Priya Yadav">
+                <h3>Priya Yadav</h3>
+                <p><span>AIR - 32</span></p>
+            </div>
+
+            <div class="card">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rohit Gupta">
+                <h3>Rohit Gupta</h3>
+                <p><span>AIR - 45</span></p>
+            </div>
+
+            <div class="card">
+                <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Neha Mishra">
+                <h3>Neha Mishra</h3>
+                <p><span>AIR - 58</span></p>
+            </div>
+
+            <div class="card">
+                <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Amit Kumar">
+                <h3>Amit Kumar</h3>
+                <p><span>AIR - 74</span></p>
+            </div>
+
+            <div class="card">
+                <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Sneha Patel">
+                <h3>Sneha Patel</h3>
+                <p><span>AIR - 89</span></p>
+            </div>
+
+            <div class="card">
+                <img src="https://randomuser.me/api/portraits/men/15.jpg" alt="Vikas Tiwari">
+                <h3>Vikas Tiwari</h3>
+                <p><span>State Rank - 2</span></p>
+            </div>
+
+            <div class="card">
+                <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Anjali Rao">
+                <h3>Anjali Rao</h3>
+                <p><span>State Rank - 5</span></p>
+            </div>
+
+            <div class="card">
+                <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Deepak Sahu">
+                <h3>Deepak Sahu</h3>
+                <p><span>State Rank - 11</span></p>
+            </div>
+
+            <div class="card">
+                <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="Kirti Agarwal">
+                <h3>Kirti Agarwal</h3>
+                <p><span>State Rank - 14</span></p>
+            </div>
+
+            <div class="card">
+                <img src="https://randomuser.me/api/portraits/men/50.jpg" alt="Manish Pandey">
+                <h3>Manish Pandey</h3>
+                <p><span>State Rank - 19</span></p>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
+     <footer>
         <div>
             <h2>Bright Future</h2>
-            <p>Your Success is Our Mission. Empowering Students | Building Careers | Creating Success.</p>
+            <p>Empowering millions of students across India with quality education at an affordable price.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-telegram"></i></a>
+            </div>
         </div>
         <div>
             <h3>Quick Links</h3>
             <ul>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="courses.html">Our Courses</a></li>
-                <li><a href="faculty.html">Expert Faculty</a></li>
-                <li><a href="results.html">Top Results</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="courses.html">Batches</a></li>
+                <li><a href="faculty.html">Educators</a></li>
+                <li><a href="results.html">Results</a></li>
+                <li><a href="contact.html">Support</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Popular Exams</h3>
+            <ul>
+                <li><a href="courses.html">IIT-JEE Main & Advanced</a></li>
+                <li><a href="courses.html">NEET Medical Exam</a></li>
+                <li><a href="courses.html">CUET UG Entrance</a></li>
+                <li><a href="courses.html">SSC CGL & Banking</a></li>
+                <li><a href="courses.html">Foundation (Class 9-10)</a></li>
             </ul>
         </div>
         <div>
             <h3>Contact Us</h3>
             <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
-            <p><i class="fa-solid fa-envelope"></i> info@brightfuture.com</p>
+            <p><i class="fa-solid fa-envelope"></i> support@brightfuture.com</p>
             <p><i class="fa-solid fa-location-dot"></i> Lucknow, Uttar Pradesh, India</p>
         </div>
+        
         <div class="footer-bottom">
-            <p>&copy; 2026 Bright Future Coaching Institute. All Rights Reserved.</p>
+            <p>&copy; Bright Future Learning App. All Rights Reserved.</p>
+            <div class="footer-legal-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Refund Policy</a>
+            </div>
         </div>
     </footer>
 
 </body>
-</html> 
+</html>

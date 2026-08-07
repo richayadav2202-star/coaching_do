@@ -237,6 +237,86 @@
             transform: translateY(0);
         }
 
+        /* Lightbox Modal Styles */
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(8px);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .lightbox-modal.active {
+            display: flex;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 900px;
+            width: 100%;
+            background: #23201E;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            animation: zoomIn 0.3s ease;
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .lightbox-content img {
+            width: 100%;
+            max-height: 70vh;
+            object-fit: contain;
+            background: #000;
+            display: block;
+        }
+
+        .lightbox-caption {
+            padding: 20px;
+            color: #FFFFFF;
+            text-align: center;
+        }
+
+        .lightbox-caption h3 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+            color: var(--accent-gold);
+        }
+
+        .lightbox-caption p {
+            font-size: 0.95rem;
+            color: #A8A29E;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 1.8rem;
+            color: #FFFFFF;
+            cursor: pointer;
+            background: rgba(0,0,0,0.5);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: var(--transition);
+            z-index: 10;
+        }
+
+        .lightbox-close:hover {
+            background: var(--accent-terracotta);
+        }
+
         /* Enhanced Footer (Matched with about.html & faculty.html) */
         footer {
             background: #23201E;
@@ -380,61 +460,102 @@
         <p>Explore classroom activities, interactive seminars, tech-enabled labs, award ceremonies, and student achievements.</p>
     </section>
 
-    <!-- Gallery Section -->
+    <!-- Title Section -->
     <div class="section-title">
         <h2>Campus Moments</h2>
         <p>A glimpse into our academic ecosystem and vibrant campus culture</p>
     </div>
 
     <section class="gallery">
+        <!-- 1. Classroom & Infrastructure -->
         <div class="box">
-            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900" alt="Smart Classroom">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhoM_8F5nPP0pVN-D-svKcpzArIFdEvwdzg_GW1ikTsg&s=10" alt="Smart Classroom">
             <div class="overlay">
-                <h3>Smart Classroom</h3>
-                <p>Interactive Digital Learning Environment</p>
+                <h3>Smart Classrooms</h3>
+                <p>AC & Well-Ventilated Rooms with Digital Boards</p>
             </div>
         </div>
 
         <div class="box">
-            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=900" alt="Seminar">
-            <div class="overlay">
-                <h3>Seminars & Workshops</h3>
-                <p>Expert Career Guidance Sessions</p>
-            </div>
-        </div>
-
-        <div class="box">
-            <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?w=900" alt="Library">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiS_uRxMOVW2mzPBpDUHwP6mvy2yf9q-vaG12TS9TzHw&s=10" alt="Library">
             <div class="overlay">
                 <h3>Central Library</h3>
-                <p>Peaceful Resource-Rich Study Zone</p>
+                <p>Peaceful Resource-Rich Study Zone for Self-Study</p>
             </div>
         </div>
 
         <div class="box">
-            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=900" alt="Faculty">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeTTVo_945XSLxhNds2pMSLxLjMlVdW9yaGdHi_mK2Pg&s=10" alt="Computer Lab">
             <div class="overlay">
-                <h3>Faculty Mentorship</h3>
-                <p>Dedicated 1-on-1 Doubt Clearing</p>
+                <h3>Computer & Science Lab</h3>
+                <p>High-Tech Computer Lab & Practical Science Equipment</p>
+            </div>
+        </div>
+
+        <!-- 2. Events & Activities -->
+        <div class="box">
+            <img src="https://www.millertanner.com/wp-content/uploads/2022/05/shutterstock_758264113.jpg" alt="Seminar">
+            <div class="overlay">
+                <h3>Seminars & Workshops</h3>
+                <p>Expert Career Guidance and Motivational Sessions</p>
             </div>
         </div>
 
         <div class="box">
-            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=900" alt="Computer Lab">
+            <img src="https://www.emmpower.com/images/icf.jpeg" alt="Cultural Events">
             <div class="overlay">
-                <h3>Computer & CBT Lab</h3>
-                <p>Real-exam Simulation Environment</p>
+                <h3>Events & Celebrations</h3>
+                <p>Annual Fests, Cultural Programs & National Festivals</p>
+            </div>
+        </div>
+
+        <!-- 3. Toppers & Achievements -->
+        <div class="box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxGTJYoyTSJ2DXvitpRWhmfEqvCJa9SB8jLXKzBiCKdA&s=10" alt="Top Rankers">
+            <div class="overlay">
+                <h3>Toppers Felicitation</h3>
+                <p>Celebrating Exam Toppers with Awards and Shields</p>
+            </div>
+        </div>
+
+        <!-- 4. Student Life & Interactions -->
+        <div class="box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQFmF1Th_lNwfdY2AYigKuQXku0nrsbjP312p1jlPnIg&s" alt="Faculty">
+            <div class="overlay">
+                <h3>Doubt Clearing & Discussions</h3>
+                <p>Dedicated 1-on-1 Faculty Interaction & Group Study</p>
+            </div>
+        </div>
+
+        <!-- 5. Video / Exam Prep Gallery Simulation -->
+        <div class="box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREbiTxR6Y-gHUcPiSXCYfFaGDwn8rfVbPqBkEN7aqWZg&s=10" alt="Exam Simulation">
+            <div class="overlay">
+                <h3>CBT Mock Tests</h3>
+                <p>Real-Exam Simulation Environment for Competitive Tests</p>
             </div>
         </div>
 
         <div class="box">
-            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=900" alt="Top Rankers">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJRYgiWa44LVvbPaGR0KZ6ukLy66M6P6Ubz8QbDj989A&s=10" alt="Success Wall">
             <div class="overlay">
-                <h3>Top Rankers Felicitations</h3>
-                <p>Celebrating Excellence & Success</p>
+                <h3>Wall of Fame</h3>
+                <p>Showcasing Our Historic Selections & Achievers</p>
             </div>
         </div>
     </section>
+
+    <!-- Lightbox Modal Popup -->
+    <div class="lightbox-modal" id="lightboxModal">
+        <div class="lightbox-content">
+            <span class="lightbox-close" id="lightboxClose">&times;</span>
+            <img src="" alt="Enlarged View" id="lightboxImg">
+            <div class="lightbox-caption">
+                <h3 id="lightboxTitle"></h3>
+                <p id="lightboxDesc"></p>
+            </div>
+        </div>
+    </div>
 
     <!-- Enhanced Footer -->
     <footer>
@@ -483,6 +604,39 @@
             </div>
         </div>
     </footer>
+
+    <!-- JavaScript for Lightbox Modal -->
+    <script>
+        const galleryBoxes = document.querySelectorAll('.gallery .box');
+        const modal = document.getElementById('lightboxModal');
+        const modalImg = document.getElementById('lightboxImg');
+        const modalTitle = document.getElementById('lightboxTitle');
+        const modalDesc = document.getElementById('lightboxDesc');
+        const closeBtn = document.getElementById('lightboxClose');
+
+        galleryBoxes.forEach(box => {
+            box.addEventListener('click', () => {
+                const img = box.querySelector('img');
+                const title = box.querySelector('.overlay h3').innerText;
+                const desc = box.querySelector('.overlay p').innerText;
+
+                modalImg.src = img.src;
+                modalTitle.innerText = title;
+                modalDesc.innerText = desc;
+                modal.classList.add('active');
+            });
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.classList.remove('active');
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+            }
+        });
+    </script>
 
 </body>
 </html>

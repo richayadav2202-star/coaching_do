@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Expert Faculty | Bright Future Coaching Institute</title>
+    <title>About Us | Bright Future Coaching Institute</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
 
     <style>
-        /* Natural Botanical & Herb Theme Variables (Matched with about.html) */
+        /* Natural Botanical & Herb Theme Variables (Matched with faculty.html) */
         :root {
             --bg-cream: #FAF9F5;
             --card-bg: #FFFFFF;
@@ -105,7 +105,7 @@
             color: #FFFFFF;
         }
 
-        /* Hero Section for Faculty */
+        /* Hero Section for About */
         .hero {
             padding: 160px 8% 60px;
             text-align: center;
@@ -164,98 +164,157 @@
             margin-top: 8px;
         }
 
-        /* Faculty Grid Cards */
-        .faculty-grid {
+        /* About Content Grid */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 2rem;
+            color: var(--text-main);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .about-text h3 span {
+            color: var(--accent-terracotta);
+        }
+
+        .about-text p {
+            color: var(--text-gray);
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-size: 0.98rem;
+        }
+
+        .about-img img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(41, 37, 36, 0.08);
+            border: 1px solid var(--border-color);
+            object-fit: cover;
+            height: 400px;
+        }
+
+        /* Mission & Vision Cards */
+        .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
         }
 
-        .faculty-card {
+        .feature-card {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 16px;
-            overflow: hidden;
+            padding: 40px 30px;
+            text-align: center;
             transition: var(--transition);
             box-shadow: 0 4px 20px rgba(41, 37, 36, 0.02);
-            text-align: center;
         }
 
-        .faculty-card:hover {
+        .feature-card:hover {
             transform: translateY(-8px);
             border-color: var(--accent-terracotta);
             box-shadow: 0 10px 30px rgba(41, 37, 36, 0.08);
         }
 
-        .faculty-img-wrapper {
-            width: 100%;
-            height: 280px;
-            overflow: hidden;
-            position: relative;
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(77, 124, 15, 0.1);
+            color: var(--accent-terracotta);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            font-size: 1.8rem;
         }
 
-        .faculty-img-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-
-        .faculty-card:hover .faculty-img-wrapper img {
-            transform: scale(1.05);
-        }
-
-        .faculty-info {
-            padding: 30px 20px;
-        }
-
-        .faculty-info h3 {
+        .feature-card h3 {
             font-size: 1.3rem;
             color: var(--text-main);
-            margin-bottom: 5px;
+            margin-bottom: 12px;
             font-weight: 700;
         }
 
-        .faculty-info .designation {
-            color: var(--accent-terracotta);
-            font-weight: 600;
-            font-size: 0.95rem;
-            margin-bottom: 12px;
-        }
-
-        .faculty-info p {
+        .feature-card p {
             color: var(--text-gray);
-            font-size: 0.9rem;
-            margin-bottom: 20px;
-            line-height: 1.6;
+            font-size: 0.92rem;
+            line-height: 1.7;
         }
 
-        .faculty-socials {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
+        /* Stats Counter Section */
+        .stats-section {
+            background: var(--gradient);
+            color: #FFFFFF;
+            padding: 50px 8%;
+            border-radius: 20px;
+            margin: 0 8% 60px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(77, 124, 15, 0.2);
         }
 
-        .faculty-socials a {
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            width: 34px;
-            height: 34px;
-            background: rgba(77, 124, 15, 0.08);
-            color: var(--accent-terracotta);
-            border-radius: 50%;
-            font-size: 0.85rem;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .faculty-socials a:hover {
-            background: var(--accent-terracotta);
+        .stat-box h3 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 8px;
             color: #FFFFFF;
         }
 
-        /* Enhanced Footer (Identical to about.html) */
+        .stat-box p {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+        }
+
+        /* Why Choose Us Grid */
+        .why-choose-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .why-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 30px 24px;
+            transition: var(--transition);
+        }
+
+        .why-card:hover {
+            border-color: var(--accent-terracotta);
+            transform: translateY(-5px);
+        }
+
+        .why-card i {
+            font-size: 2rem;
+            color: var(--accent-terracotta);
+            margin-bottom: 15px;
+        }
+
+        .why-card h4 {
+            font-size: 1.15rem;
+            color: var(--text-main);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .why-card p {
+            font-size: 0.88rem;
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+
+        /* Enhanced Footer (Identical to faculty.html) */
         footer {
             background: #23201E;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -361,6 +420,11 @@
                 font-size: 2.3rem;
             }
 
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
             .footer-bottom {
                 flex-direction: column;
                 text-align: center;
@@ -379,9 +443,9 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="about.html" style="color: var(--accent-terracotta);">About</a></li>
                 <li><a href="courses.html">Courses</a></li>
-                <li><a href="faculty.html" style="color: var(--accent-terracotta);">Faculty</a></li>
+                <li><a href="faculty.html">Faculty</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="results.html">Results</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -393,92 +457,117 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <span class="badge"><i class="fa-solid fa-chalkboard-user"></i> World-Class Mentors</span>
-        <h1>Meet Our Expert <span>Faculty</span></h1>
+        <span class="badge"><i class="fa-solid fa-circle-info"></i> Who We Are</span>
+        <h1>About <span>Bright Future</span></h1>
         <p>
-            Learn from seasoned educators, industry experts, and IIT/NEET alumni who are dedicated to mentoring you towards ultimate success.
+            Empowering students with exceptional academic training, structured mentorship, and an environment designed to foster ultimate success.
         </p>
     </section>
 
-    <!-- Faculty Members Section -->
+    <!-- About Content Section -->
     <section>
-        <div class="section-title">
-            <h2>Our Leading Educators</h2>
-            <p>Years of experience combined with a passion for teaching</p>
-        </div>
-
-        <div class="faculty-grid">
-            <!-- Faculty 1 -->
-            <div class="faculty-card">
-                <div class="faculty-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600" alt="Dr. Ananya Sharma">
-                </div>
-                <div class="faculty-info">
-                    <h3>Dr. Ananya Sharma</h3>
-                    <div class="designation">HOD - Physics (IIT-JEE Expert)</div>
-                    <p>Ex-IIT Delhi Alumna with over 12+ years of experience simplifying complex physics mechanics for aspirants.</p>
-                    <div class="faculty-socials">
-                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#"><i class="fa-solid fa-envelope"></i></a>
-                    </div>
-                </div>
+        <div class="about-grid">
+            <div class="about-text">
+                <h3>Building Careers & <span>Shaping Futures</span> Since 2014</h3>
+                <p>
+                    Bright Future Coaching Institute has been at the forefront of quality education. We believe that every student has unique potential, and with the right guidance, dedication, and framework, they can conquer any competitive examination.
+                </p>
+                <p>
+                    Our curriculum goes beyond rote learning; we focus heavily on conceptual clarity, rigorous problem-solving practices, and individual doubt-clearing sessions to ensure complete student confidence.
+                </p>
             </div>
-
-            <!-- Faculty 2 -->
-            <div class="faculty-card">
-                <div class="faculty-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600" alt="Prof. Rajesh Verma">
-                </div>
-                <div class="faculty-info">
-                    <h3>Prof. Rajesh Verma</h3>
-                    <div class="designation">Senior Chemistry Mentor</div>
-                    <p>Specializes in Organic & Inorganic Chemistry. Known for unique shortcut formulas and conceptual clarity.</p>
-                    <div class="faculty-socials">
-                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#"><i class="fa-solid fa-envelope"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Faculty 3 -->
-            <div class="faculty-card">
-                <div class="faculty-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600" alt="Dr. Priya Nair">
-                </div>
-                <div class="faculty-info">
-                    <h3>Dr. Priya Nair</h3>
-                    <div class="designation">Biology & NEET Head Coach</div>
-                    <p>MBBS, AIIMS Delhi Graduate with 10+ years of mentorship experience, helping hundreds secure top NEET ranks.</p>
-                    <div class="faculty-socials">
-                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#"><i class="fa-solid fa-envelope"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Faculty 4 -->
-            <div class="faculty-card">
-                <div class="faculty-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600" alt="Mr. Amit Saxena">
-                </div>
-                <div class="faculty-info">
-                    <h3>Mr. Amit Saxena</h3>
-                    <div class="designation">Senior Mathematics Faculty</div>
-                    <p>Expert in Calculus and Algebra. Passionate about turning math phobia into a scoring advantage for students.</p>
-                    <div class="faculty-socials">
-                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#"><i class="fa-solid fa-envelope"></i></a>
-                    </div>
-                </div>
+            <div class="about-img">
+                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600" alt="Students learning">
             </div>
         </div>
     </section>
 
-    <!-- Enhanced Footer (Identical to about.html) -->
+    <!-- Stats Counter Section -->
+    <div class="stats-section">
+        <div class="stat-box">
+            <h3>10+</h3>
+            <p>Years of Excellence</p>
+        </div>
+        <div class="stat-box">
+            <h3>5000+</h3>
+            <p>Successful Students</p>
+        </div>
+        <div class="stat-box">
+            <h3>25+</h3>
+            <p>Expert Faculty Members</p>
+        </div>
+        <div class="stat-box">
+            <h3>98%</h3>
+            <p>Selection Success Rate</p>
+        </div>
+    </div>
+
+    <!-- Mission & Vision Section -->
+    <section>
+        <div class="section-title">
+            <h2>Our Core Values</h2>
+            <p>What drives us forward every single day</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fa-solid fa-bullseye"></i>
+                </div>
+                <h3>Our Mission</h3>
+                <p>To provide accessible, top-tier coaching and holistic mentorship that transforms aspirant potential into glorious success stories.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fa-solid fa-eye"></i>
+                </div>
+                <h3>Our Vision</h3>
+                <p>To become the most trusted and result-oriented educational institute known for integrity, innovation, and consistent excellence.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fa-solid fa-handshake"></i>
+                </div>
+                <h3>Our Commitment</h3>
+                <p>Unwavering dedication to student welfare, continuous faculty development, and maintaining an encouraging learning environment.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section>
+        <div class="section-title">
+            <h2>Why Choose Bright Future?</h2>
+            <p>Discover the unique pillars that make us stand out in competitive education</p>
+        </div>
+
+        <div class="why-choose-grid">
+            <div class="why-card">
+                <i class="fa-solid fa-chalkboard-user"></i>
+                <h4>Experienced Faculty</h4>
+                <p>Learn directly from top IIT/NEET alumni and veteran subject matter experts.</p>
+            </div>
+            <div class="why-card">
+                <i class="fa-solid fa-book-open"></i>
+                <h4>Comprehensive Material</h4>
+                <p>Extensively researched study notes, question banks, and regular test series.</p>
+            </div>
+            <div class="why-card">
+                <i class="fa-solid fa-headset"></i>
+                <h4>Personal Mentorship</h4>
+                <p>Dedicated one-on-one doubt-clearing sessions and psychological guidance.</p>
+            </div>
+            <div class="why-card">
+                <i class="fa-solid fa-chart-line"></i>
+                <h4>Performance Tracking</h4>
+                <p>Regular analytical reports to evaluate progress and pinpoint weak areas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Footer (Identical to faculty.html) -->
     <footer>
         <div>
             <h2>Bright Future</h2>
